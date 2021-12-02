@@ -1,8 +1,8 @@
 package DesignPatterns;
 
 public class Singleton {
-
-	private static Singleton instance;
+	//push
+	private static volatile Singleton instance;
 
 	public Singleton getInstance() {
 		if (instance == null) {

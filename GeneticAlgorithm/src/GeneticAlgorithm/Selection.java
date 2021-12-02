@@ -1,5 +1,7 @@
 package GeneticAlgorithm;
 
-public class Selection {
+import DesignPatterns.GAFunucations;
+
+public class Selection implements GAFunucations {
 
 }

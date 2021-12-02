@@ -1,5 +1,7 @@
 package GeneticAlgorithm;
 
-public class Mutation {
+import DesignPatterns.GAFunucations;
+
+public class Mutation implements GAFunucations {
 
 }

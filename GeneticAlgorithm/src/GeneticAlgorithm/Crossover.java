@@ -1,6 +1,8 @@
 package GeneticAlgorithm;
 
-public class Crossover {
+import DesignPatterns.GAFunucations;
+
+public class Crossover implements GAFunucations {
 
 	//This is the single point corss over funtion, 
 	// an example of this would be if we had to line of binary
