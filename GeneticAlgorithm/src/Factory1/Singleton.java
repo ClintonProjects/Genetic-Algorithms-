@@ -1,4 +1,4 @@
-package DesignPatterns;
+package Factory1;
 
 public class Singleton {
 	//push
