@@ -1,4 +1,4 @@
-package AnimalFamily;
+package GenerticAlgorithmA;
 
 public class SelectionA implements GenerticAlgorithmA {
 

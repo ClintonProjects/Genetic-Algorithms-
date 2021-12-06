@@ -1,4 +1,4 @@
-package AnimalFamily;
+package GenerticAlgorithmA;
 
 public class CrossoverA implements GenerticAlgorithmA {
 
