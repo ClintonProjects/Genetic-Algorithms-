@@ -4,7 +4,7 @@ public class Individual {
 	
 	private String[] genes = new String[3];
 	private double fitness; // distance
-	//Individual next; 
+	Individual next; 
 	
 	public Individual(String[] genes, double fitness) {
 		super();
