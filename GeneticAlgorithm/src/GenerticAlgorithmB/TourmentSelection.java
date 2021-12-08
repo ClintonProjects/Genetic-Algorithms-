@@ -9,7 +9,7 @@ import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 import Interfaces.Selection;
 
-public class TourmentSelection implements GenerticAlgorithmB, Selection {
+public class TourmentSelection implements Selection {
 
 	Population population;
 
@@ -19,11 +19,6 @@ public class TourmentSelection implements GenerticAlgorithmB, Selection {
 	public TourmentSelection(Population population) {
 		this.population = population;
 	}
-
-	@Override
-	public int getId() {
-		return 0;
-	};
 
 	// https://www.youtube.com/channel/UCzvWh64GQm_OfkJXyYo7whQ
 	// https://www.youtube.com/watch?v=pJ45IaGzI1c

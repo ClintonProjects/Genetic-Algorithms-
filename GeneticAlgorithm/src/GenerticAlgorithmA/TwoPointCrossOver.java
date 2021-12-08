@@ -4,12 +4,8 @@ import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import Interfaces.Crossover;
 
-public class TwoPointCrossOver implements GenerticAlgorithmA, Crossover {
+public class TwoPointCrossOver implements  Crossover {
 
-	@Override
-	public int getId() {
-		return 0;
-	}
 
 	@Override
 	public Crossover crossover(Couple couple) {

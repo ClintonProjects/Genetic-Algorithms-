@@ -6,12 +6,7 @@ import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 import Interfaces.Selection;
 
-public class RouletteWheelSelection implements GenerticAlgorithmA, Selection {
-
-	@Override
-	public int getId() {
-		return 0;
-	}
+public class RouletteWheelSelection implements  Selection {
 
 	@Override
 	public ArrayList<Individual> selection(Population population) {

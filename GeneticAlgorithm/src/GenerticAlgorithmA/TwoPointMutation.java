@@ -3,12 +3,7 @@ package GenerticAlgorithmA;
 import GeneticAlgorithm.Couple;
 import Interfaces.Mutation;
 
-public class TwoPointMutation implements GenerticAlgorithmA, Mutation {
-	
-	@Override
-	public int getId() {
-		return 0;
-	}
+public class TwoPointMutation implements  Mutation {
 
 	@Override
 	public Mutation Mutation(Couple couple) {
