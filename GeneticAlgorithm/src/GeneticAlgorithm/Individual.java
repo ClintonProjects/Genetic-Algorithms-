@@ -27,7 +27,7 @@ public class Individual {
 
 		ArrayList<String> result = new ArrayList<String>();
 		for (int j = 0; j < ConfigurationFile_ins.CITY_NUM; j++) {
-			int num = j + Math.abs(new Random().nextInt(genes.size() -2));
+			int num = Math.abs(new Random().nextInt(genes.size()));
 			result.add(genes.get(num));
 			genes.remove(num);
 		}
@@ -41,10 +41,9 @@ public class Individual {
 	float updateFitness() {
 		float totalDis = 0.0f;
 		for (int i = 0; i < ConfigurationFile_ins.CITY_NUM; i++) {
-			int curCity = Integer.parseInt(this.genes.get(i)) - 1;// the maptable of mind from 1, but in reality from 0
-			int nextCity = Integer.parseInt(this.genes.get((i + 1) % ConfigurationFile_ins.CITY_NUM)) - 1;
+			int curCity = Integer.parseInt(this.genes.get(i));// the maptable of mind from 1, but in reality from 0
+			int nextCity = Integer.parseInt(this.genes.get((i + 1) % ConfigurationFile_ins.CITY_NUM));
 			// use i+1 %max ==0 to go back to initial
-
 			totalDis += ConfigurationFile_ins.disMap[curCity][nextCity];
 		}
 
