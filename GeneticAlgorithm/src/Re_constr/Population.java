@@ -28,4 +28,8 @@ public class Population {
 		population[index]=newIndividual;
 	}
 
+
+	public Individual[] getPopulation() {
+		return population;
+	}
 }

@@ -12,7 +12,7 @@ public class Individual {
 	
 	float fitness;//
 	
-	Individual() {
+	public Individual() {
 		
 		this.genes=new String[ConfigurationFile_ins.CITY_NUM];
 		createByRandomGenes();
