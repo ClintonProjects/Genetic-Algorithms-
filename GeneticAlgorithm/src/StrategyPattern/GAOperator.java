@@ -4,11 +4,13 @@ import GenerticAlgorithmB.*;
 import GenerticAlgorithmA.*;
 import GeneticAlgorithm.*;
 import Interfaces.*;
-abstract public class GAOperator {
+import AbstractFactory.*;
 
-	Crossover crossover; 
-	Mutation Mutation;
-	Selection selection;
+abstract public class GAOperator {
+    public FactoryProvider factoryProvider ;
+    public Crossover crossover; 
+    public Mutation Mutation;
+    public 	Selection selection;
 	
 
 }
