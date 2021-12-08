@@ -3,12 +3,50 @@ package Runner;
 import GenerticAlgorithmB.TourmentSelection;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
-import Re_constr.onePointCrossover;
+//import Re_constr.onePointCrossover;
 import GeneticAlgorithm.Population;
+import Singleton.ConfigurationFile;
+import Singleton.Singleton;
+import StrategyPattern.*;
 
 public class Runner {
 
 	public static void main(String... args) {
+		
+		ConfigurationFile ConfigurationFile_ins = Singleton.getInstance();
+		
+		int DEVELOP_NUM=ConfigurationFile_ins.DEVELOP_NUM;
+		
+		
+		while( DEVELOP_NUM < 0){
+		Population p1=new Population();
+		
+		GAOperatorOnePoint GaOperatorOnePoint =new GAOperatorOnePoint();
+		
+		
+	
+		Couple parent = GaOperatorOnePoint.selection.selection(p1);
+		
+		Individual child =GaOperatorOnePoint.crossover.crossover(parent);
+		
+		Individual newChild=GaOperatorOnePoint.Mutation.Mutation(child);
+		
+	
+		// do a replace or just add to pa; 
+		
+		
+		DEVELOP_NUM--;
+		
+		}
+		
+		
+	
+		
+		
+		
+	//	GaOperatorOnePoint.Mutation.Mutation(null);
+		
+		
 //		ArrayList<Integer> TouramentSelection = new TourmentSelection().TouramentSelection();
 //		TouramentSelection.forEach(i -> System.out.println(i));
 
@@ -39,9 +77,9 @@ public class Runner {
 //        p1.population[i].printRate();
 //		   }
 
-		Individual ind1 = new Individual();
+	//	Individual ind1 = new Individual();
 		//ind1.getGenes().forEach(i -> System.out.println(i));
-		System.out.println(new TourmentSelection().selection(new Population()).size());
+	//	System.out.println(new TourmentSelection().selection(new Population()).size());
 		
 		
 		

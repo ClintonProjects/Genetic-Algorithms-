@@ -1,9 +1,10 @@
 package Interfaces;
 
 import GeneticAlgorithm.Couple;
+import GeneticAlgorithm.Individual;
 
 public interface Crossover {
 
-	Crossover crossover(Couple couple);
+	Individual crossover(Couple couple);
 
 }

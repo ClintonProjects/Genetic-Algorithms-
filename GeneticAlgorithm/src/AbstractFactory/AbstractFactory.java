@@ -5,7 +5,7 @@ import Interfaces.Mutation;
 import Interfaces.Selection;
 
 public interface AbstractFactory  {
-	Crossover getCrossover();
-	Mutation getMutation();
-	Selection getSelection();
+	public Crossover getCrossover();
+	public Mutation getMutation();
+	public Selection getSelection();
 }

@@ -5,7 +5,7 @@ public class ConfigurationFile {
 	private static volatile ConfigurationFile instance;
 
 	public final int SPECIES_NUM = 20;
-	final int DEVELOP_NUM = 2;
+	public final int DEVELOP_NUM = 1000;
 	public final float pcl = 0.6f;
 
 	public final float pch = 0.95f;
