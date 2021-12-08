@@ -1,7 +1,6 @@
 package GenerticAlgorithmA;
 
 import GeneticAlgorithm.Couple;
-import GeneticAlgorithm.Individual;
 import Interfaces.Mutation;
 
 public class TwoPointMutation implements GenerticAlgorithmA, Mutation {
@@ -12,8 +11,8 @@ public class TwoPointMutation implements GenerticAlgorithmA, Mutation {
 	}
 
 	@Override
-	public Individual Mutation(Couple couple) {
+	public Mutation Mutation(Couple couple) {
 		// TODO Auto-generated method stub
 		return null;
-	}
+	}	
 }

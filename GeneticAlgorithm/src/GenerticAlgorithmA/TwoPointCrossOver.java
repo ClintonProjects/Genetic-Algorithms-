@@ -12,7 +12,7 @@ public class TwoPointCrossOver implements GenerticAlgorithmA, Crossover {
 	}
 
 	@Override
-	public Couple crossover(Couple couple) {
+	public Crossover crossover(Couple couple) {
 		// TODO Auto-generated method stub
 		return null;
 	}

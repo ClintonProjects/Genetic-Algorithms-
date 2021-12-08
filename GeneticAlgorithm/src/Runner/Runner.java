@@ -41,7 +41,7 @@ public class Runner {
 
 		Individual ind1 = new Individual();
 		//ind1.getGenes().forEach(i -> System.out.println(i));
-		System.out.println(new TourmentSelection().TouramentSelection(new Population()).size());
+		System.out.println(new TourmentSelection().selection(new Population()).size());
 		
 		
 		

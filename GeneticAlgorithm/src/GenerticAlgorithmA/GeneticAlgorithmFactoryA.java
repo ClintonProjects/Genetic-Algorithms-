@@ -1,17 +1,32 @@
 package GenerticAlgorithmA;
 
 import AbstractFactory.AbstractFactory;
+import GeneticAlgorithm.Couple;
+import GeneticAlgorithm.Individual;
+import GeneticAlgorithm.Population;
+import Interfaces.Crossover;
+import Interfaces.Mutation;
+import Interfaces.Selection;
 
-public class GeneticAlgorithmFactoryA implements AbstractFactory<GenerticAlgorithmA> {
+public class GeneticAlgorithmFactoryA implements AbstractFactory {
 
 	@Override
-	public GenerticAlgorithmA create(String gaMethod) {
-		if ( gaMethod.equalsIgnoreCase("RouletteWheelSelection"))
-			return new RouletteWheelSelection();
-		else if ( gaMethod.equalsIgnoreCase("TwoPointMutation")) 
-			return new TwoPointMutation();
-		if ( gaMethod.equalsIgnoreCase("TwoPointCrossOver")) 
-			return new TwoPointCrossOver();
-		return null;
+	public Crossover getCrossover() {
+		// TODO Auto-generated method stub
+		return new TwoPointCrossOver();
 	}
+
+	@Override
+	public Mutation getMutation() {
+		// TODO Auto-generated method stub
+		return new TwoPointMutation();
+	}
+
+	@Override
+	public Selection getSelection() {
+		// TODO Auto-generated method stub
+		return new RouletteWheelSelection();
+	}
+
+
 }

@@ -1,14 +1,30 @@
 package GenerticAlgorithmB;
 
 import AbstractFactory.AbstractFactory;
+import Interfaces.Crossover;
+import Interfaces.Mutation;
+import Interfaces.Selection;
 
-public class GeneticAlgorithmFactoryB implements AbstractFactory<GenerticAlgorithmB> {
+public class GeneticAlgorithmFactoryB implements AbstractFactory {
 
 	@Override
-	public GenerticAlgorithmB create(String gaMethod) {
-		if (gaMethod.equalsIgnoreCase("Selection")) return new TourmentSelection();
-		else if (gaMethod.equalsIgnoreCase("Crossover")) return new OnePointMutation();
-		if (gaMethod.equalsIgnoreCase("Mutation")) return new OnePointCrossover();
-		return null;
+	public Crossover getCrossover() {
+		// TODO Auto-generated method stub
+		return new OnePointCrossover();
 	}
+
+	@Override
+	public Mutation getMutation() {
+		// TODO Auto-generated method stub
+		return new OnePointMutation();
+	}
+
+	@Override
+	public Selection getSelection() {
+		// TODO Auto-generated method stub
+		return new TourmentSelection();
+	}
+
+
+
 }

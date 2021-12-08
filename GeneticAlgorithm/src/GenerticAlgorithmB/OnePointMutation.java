@@ -8,16 +8,13 @@ import Interfaces.Mutation;
 public class OnePointMutation implements GenerticAlgorithmB, Mutation {
 	
 	@Override
-	public String getId() {
-		return "";
+	public int getId() {
+		return 0;
 	}
 
 	@Override
-	public Individual Mutation(Couple couple) {
+	public Mutation Mutation(Couple couple) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	
-	
 }

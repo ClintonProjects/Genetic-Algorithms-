@@ -6,12 +6,12 @@ import Interfaces.Crossover;
 public class OnePointCrossover implements GenerticAlgorithmB, Crossover {
 
 	@Override
-	public String getId() {
-		return "";
+	public int getId() {
+		return 0;
 	}
 
 	@Override
-	public Couple crossover(Couple couple) {
+	public Crossover crossover(Couple couple) {
 		// TODO Auto-generated method stub
 		return null;
 	};

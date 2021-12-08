@@ -21,14 +21,15 @@ public class TourmentSelection implements GenerticAlgorithmB, Selection {
 	}
 
 	@Override
-	public String getId() {
-		return "";
+	public int getId() {
+		return 0;
 	};
 
 	// https://www.youtube.com/channel/UCzvWh64GQm_OfkJXyYo7whQ
 	// https://www.youtube.com/watch?v=pJ45IaGzI1c
 	// https://www.youtube.com/watch?v=9OXJapW8vqM
 	// https://www.youtube.com/watch?v=3JrpyuSHEWQ
+
 
 	
 	public ArrayList<Individual> selection(Population population) {

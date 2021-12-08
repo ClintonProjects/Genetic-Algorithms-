@@ -3,7 +3,7 @@ package Interfaces;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 
-public interface Mutation<T> {
+public interface Mutation {
 	
-	Individual Mutation(Couple couple);
+	Mutation Mutation(Couple couple);
 }

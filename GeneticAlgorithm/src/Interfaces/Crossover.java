@@ -2,8 +2,8 @@ package Interfaces;
 
 import GeneticAlgorithm.Couple;
 
-public interface Crossover<T> {
+public interface Crossover {
 
-	Couple crossover(Couple couple);
+	Crossover crossover(Couple couple);
 
 }
