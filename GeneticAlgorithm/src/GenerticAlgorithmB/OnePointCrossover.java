@@ -3,6 +3,7 @@ package GenerticAlgorithmB;
 import java.util.Random;
 
 import GeneticAlgorithm.Couple;
+import GeneticAlgorithm.Individual;
 import Interfaces.Crossover;
 import Singleton.ConfigurationFile;
 import Singleton.ConfigurationFileSingleton;
@@ -12,7 +13,7 @@ public class OnePointCrossover implements Crossover {
 	ConfigurationFile ConfigurationFile_ins = ConfigurationFileSingleton.getInstance();
 
 	@Override
-	public Crossover crossover(Couple couple) {
+	public Individual crossover(Couple couple) {
 		float rate = (float) Math.random();
 		Random rand = new Random();
 		System.out.println("perpare cross");

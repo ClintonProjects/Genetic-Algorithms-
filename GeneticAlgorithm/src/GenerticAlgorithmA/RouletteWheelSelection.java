@@ -2,6 +2,7 @@ package GenerticAlgorithmA;
 
 import java.util.ArrayList;
 
+import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 import Interfaces.Selection;
@@ -9,8 +10,10 @@ import Interfaces.Selection;
 public class RouletteWheelSelection implements  Selection {
 
 	@Override
-	public ArrayList<Individual> selection(Population population) {
+	public Couple selection(Population population) {
 		// TODO Auto-generated method stub
 		return null;
-	};
+	}
+
+
 }
