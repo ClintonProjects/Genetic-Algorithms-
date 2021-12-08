@@ -1,6 +1,7 @@
 package GeneticAlgorithm;
 
 
+
 public class Couple {
 
 	//A couple is 2 Individuals
