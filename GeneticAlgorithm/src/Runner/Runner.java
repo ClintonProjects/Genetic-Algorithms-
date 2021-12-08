@@ -1,7 +1,7 @@
 package Runner;
 
 import GeneticAlgorithm.Couple;
-import Re_constr.Individual;
+import GeneticAlgorithm.Individual;
 import Re_constr.onePointCrossover;
 
 public class Runner {

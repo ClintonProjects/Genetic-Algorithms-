@@ -2,6 +2,7 @@ package Re_constr;
 
 import java.util.ArrayList;
 
+import GeneticAlgorithm.Individual;
 import Singleton.ConfigurationFile;
 import Singleton.Singleton;
 

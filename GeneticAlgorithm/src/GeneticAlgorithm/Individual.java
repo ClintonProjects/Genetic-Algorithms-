@@ -10,33 +10,31 @@ import Singleton.Singleton;
 public class Individual {
 	// ConfigurationFile;
 	ConfigurationFile ConfigurationFile_ins = Singleton.getInstance();
-	ArrayList<String> genes = new ArrayList<String>();
+	public ArrayList<String> genes = new ArrayList<String>();
 
 	float fitness;//
 
 	public Individual() {
-		genes = (ArrayList<String>) Arrays.asList(new String[ConfigurationFile_ins.CITY_NUM]);
 		createByRandomGenes();
 		this.fitness = updateFitness();
 		// System.out.println(this.fitness); only for test
 	}
 
 	void createByRandomGenes() {
-		for (int i = 0; i < genes.size(); i++) {
-			genes.add(Integer.toString(i + 1));
-		}
-
-		// get random seed
-		Random rand = new Random();
-		// make the every position of gene ie. sequence of the city to be random
+		
+		for (int i = 0; i < ConfigurationFile_ins.CITY_NUM; i++) 
+			genes.add(String.valueOf(i));
+	
+		ArrayList<String> result = new ArrayList<String>();
 		for (int j = 0; j < genes.size(); j++) {
-			int num = j + rand.nextInt(genes.size() - j);
-
-			// swap(genes[num],genes[j])
-			String tmp = genes.get(num);
-			genes.set(num, genes.get(j));
-			genes.set(j, tmp);
+			int num = j + new Random().nextInt(genes.size() - j);
+			result.add(genes.get(num));
+			genes.remove(num);
 		}
+		genes.clear();
+		genes.addAll(result);
+		
+		System.out.println(genes.size());
 	}
 
 	float updateFitness() {
@@ -61,4 +59,15 @@ public class Individual {
 		System.out.println("the current distance：" + updateFitness());
 	}
 
+	public ArrayList<String> getGenes() {
+		return genes;
+	}
+
+	public void setGenes(ArrayList<String> genes) {
+		this.genes = genes;
+	}
+
+	
+	
+	
 }
