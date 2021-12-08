@@ -8,7 +8,7 @@ abstract public class GAOperator {
 
 	Crossover crossover; 
 	Mutation Mutation;
-	Selection selection;
+	Selection selection = new GeneticAlgorithmFactoryA().getSelection();
 	
 
 }

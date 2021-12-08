@@ -5,7 +5,8 @@ import GenerticAlgorithmB.GeneticAlgorithmFactoryB;
 
 
 public class FactoryProvider {
-
+ 
+	
 	public static AbstractFactory getFactory(String choice) {
 
 		if (choice.equalsIgnoreCase("A")) {
