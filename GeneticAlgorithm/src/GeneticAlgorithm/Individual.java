@@ -35,7 +35,7 @@ public class Individual {
 		genes.addAll(result);
 	}
 
-	float updateFitness() {
+	public float updateFitness() {
 		float totalDis = 0.0f;
 		for (int i = 0; i < ConfigurationFile_ins.CITY_NUM; i++) {
 			int curCity = Integer.parseInt(this.genes.get(i));// the maptable of mind from 1, but in reality from 0
@@ -47,7 +47,7 @@ public class Individual {
 		return this.fitness;
 	}
 
-	void printRate() {
+	public void printRate() {
 		System.out.print("the route ：");
 		for (int i = 0; i < genes.size(); i++)
 			System.out.print(genes.get(i) + "->");
