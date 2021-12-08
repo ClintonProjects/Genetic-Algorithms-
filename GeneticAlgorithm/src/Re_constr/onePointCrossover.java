@@ -28,9 +28,9 @@ public class onePointCrossover {
 				// couple.Individual2.genes[sec]=couple.Individual1.genes[i]
 
 				int fir, sec;
-				for (fir = 0; !couple.Individual2.genes.get(fir).equals(couple.Individual2.genes.get(i)); fir++)
+				for (fir = 0; !couple.Individual1.genes.get(fir).equals(couple.Individual2.genes.get(i)); fir++)
 					;
-				for (sec = 0; !couple.Individual2.genes.get(sec).equals(couple.Individual2.genes.get(i)); sec++)
+				for (sec = 0; !couple.Individual2.genes.get(sec).equals(couple.Individual1.genes.get(i)); sec++)
 					;
 				// swap
 				String tmp;
