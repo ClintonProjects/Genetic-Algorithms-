@@ -1,10 +1,12 @@
 package GenerticAlgorithmB;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 import GeneticAlgorithm.Couple;
-import Re_constr.Population;
+import GeneticAlgorithm.Individual;
+import GeneticAlgorithm.Population;
 
 public class TourmentSelection implements GenerticAlgorithmB {
 
@@ -27,24 +29,12 @@ public class TourmentSelection implements GenerticAlgorithmB {
 	// https://www.youtube.com/watch?v=9OXJapW8vqM
 	// https://www.youtube.com/watch?v=3JrpyuSHEWQ
 
-	public ArrayList<Integer> TouramentSelection() {
-//		Individual IndividualA = new Individual();
-//		Individual IndividualB = new Individual();
-//		Individual[] listOfPopulation = population.getPopulation();
-//		ArrayList<Individual> newList = (ArrayList<Individual>) Arrays.asList(listOfPopulation);
+	public ArrayList<Individual> TouramentSelection(Population population) {
+		ArrayList<Individual> newList = population.getPopulation();
+		ArrayList<Couple> listOfCouples = new ArrayList<Couple>();
 
 		// This code will be change from to the actual Algorithm, it just temp
-
 		Random rand = new Random();
-
-		ArrayList<Integer> newList = new ArrayList<Integer>();
-		ArrayList<Couple> listOfCouples = new ArrayList<Couple>();
-		ArrayList<Integer> result = new ArrayList<Integer>();
-
-		for (int i = 0; i < 10000; i++) {
-			int tempComparer = rand.nextInt(10000000);
-			if (!newList.contains(tempComparer)) newList.add(rand.nextInt(10000000));
-		}
 
 		// making sure the population count is an even number, this will cause issue
 		// since it going to remove 1 item
@@ -52,10 +42,10 @@ public class TourmentSelection implements GenerticAlgorithmB {
 		if (selectionReturnSize % 2 == 1) selectionReturnSize = -1;
 
 		// Choosing two random individuals from the population:
-		for (int i = 0; i < selectionReturnSize / 2; i++) {
+		for (int i = 0; i < selectionReturnSize; i++) {
 			// sets two random members to indivuals
-			Integer indAToBeReturned = newList.get(rand.nextInt(newList.size()));
-			Integer indBToBeReturned = newList.get(rand.nextInt(newList.size()));
+			Individual indAToBeReturned = newList.get(rand.nextInt(newList.size()));
+			Individual indBToBeReturned = newList.get(rand.nextInt(newList.size()));
 
 			// checks if are two Individuals are same, if they are gets a new one
 			if (indAToBeReturned == indBToBeReturned) do
@@ -73,22 +63,27 @@ public class TourmentSelection implements GenerticAlgorithmB {
 		// This list should be empty from the code above but just incase
 		newList.clear();
 
+		// Compares the reslts
 		for (Couple i : listOfCouples) {
 			double randomNumber = Math.abs(rand.nextDouble()) % 2;
-			// Chooses are winner:, we biased the probability towards the fitter indivual
-//			if (i.getA() > i.getB())
-//				if (randomNumber < 0.75)
-//					result.add(i.getA());
-//				else
-//					result.add(i.getB());
-//			else if (randomNumber < 0.75)
-//				result.add(i.getB());
-//			else
-//				result.add(i.getA());
+			// Chooses are winner:, we biased the probability towards the fitter Individual
+			float coupleAFitness = i.getIndividual1().getFitness();
+			float coupleBFitness = i.getIndividual2().getFitness();
+
+			if (coupleAFitness > coupleBFitness)
+				if (randomNumber < 0.75)
+					newList.add(i.getIndividual1());
+				else
+					newList.add(i.getIndividual2());
+			else {
+				if (randomNumber < 0.75)
+					newList.add(i.getIndividual2());
+				else
+					newList.add(i.getIndividual1());
+			}
 		}
 
-		System.out.println("size: " + result.size());
-//		return result;
+		return newList;
 	}
 
 }

@@ -63,6 +63,11 @@ public class Individual {
 		this.genes = genes;
 	}
 
+	public float getFitness() {
+		return fitness;
+	}
+
+
 	
 	
 	

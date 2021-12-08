@@ -1,19 +1,31 @@
 package GeneticAlgorithm;
 
+
 import java.util.ArrayList;
-import java.util.Random;
+
+import GeneticAlgorithm.Individual;
+import Singleton.Singleton;
 
 public class Population {
 	
-	ArrayList<?> population = new ArrayList<Individual>();
+	int speciesNum = Singleton.getInstance().SPECIES_NUM;
+	ArrayList<Individual> population = new ArrayList<Individual>();
 
 	public Population() {
-		create();
+		createPopulation();
 	}
- 	
-	public void create() {
+
+	void createPopulation() {
+		for (int i = 0; i < speciesNum; i++) {
+			population.add(new Individual());
+		}
 	}
-	
-	
- 	
+
+	void add(Individual newIndividual, int index) {
+		population.set(index, new Individual());
+	}
+
+	public ArrayList<Individual> getPopulation() {
+		return population;
+	}
 }

@@ -4,6 +4,7 @@ import GenerticAlgorithmB.TourmentSelection;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import Re_constr.onePointCrossover;
+import GeneticAlgorithm.Population;
 
 public class Runner {
 
@@ -40,9 +41,7 @@ public class Runner {
 
 		Individual ind1 = new Individual();
 		//ind1.getGenes().forEach(i -> System.out.println(i));
-		
-		
-//		new TourmentSelection().TouramentSelection();
+		System.out.println(new TourmentSelection().TouramentSelection(new Population()).size());
 		
 		
 		
