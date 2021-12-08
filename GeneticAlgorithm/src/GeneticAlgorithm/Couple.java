@@ -1,6 +1,5 @@
 package GeneticAlgorithm;
 
-import Re_constr.Individual;
 
 public class Couple {
 

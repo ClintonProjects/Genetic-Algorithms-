@@ -1,5 +1,6 @@
 package Runner;
 
+import GenerticAlgorithmB.TourmentSelection;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import Re_constr.onePointCrossover;
@@ -38,7 +39,15 @@ public class Runner {
 //		   }
 
 		Individual ind1 = new Individual();
-		ind1.getGenes().forEach(i -> System.out.println(i));
+		//ind1.getGenes().forEach(i -> System.out.println(i));
+		
+		
+//		new TourmentSelection().TouramentSelection();
+		
+		
+		
+		
+		
 //		ind1.printRate();
 //		Individual ind2 = new Individual();
 //		Couple cou1 = new Couple(ind1, ind2);

@@ -21,7 +21,6 @@ public class Individual {
 	}
 
 	void createByRandomGenes() {
-		
 		for (int i = 0; i < ConfigurationFile_ins.CITY_NUM; i++) 
 			genes.add(String.valueOf(i));
 
@@ -34,8 +33,6 @@ public class Individual {
 		
 		genes.clear();
 		genes.addAll(result);
-		
-		System.out.println(genes.size());
 	}
 
 	float updateFitness() {
@@ -46,7 +43,6 @@ public class Individual {
 			// use i+1 %max ==0 to go back to initial
 			totalDis += ConfigurationFile_ins.disMap[curCity][nextCity];
 		}
-
 		this.fitness = totalDis;
 		return this.fitness;
 	}
