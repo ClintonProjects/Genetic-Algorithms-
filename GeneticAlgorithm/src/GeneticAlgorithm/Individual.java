@@ -24,13 +24,14 @@ public class Individual {
 		
 		for (int i = 0; i < ConfigurationFile_ins.CITY_NUM; i++) 
 			genes.add(String.valueOf(i));
-	
+
 		ArrayList<String> result = new ArrayList<String>();
-		for (int j = 0; j < genes.size(); j++) {
-			int num = j + new Random().nextInt(genes.size() - j);
+		for (int j = 0; j < ConfigurationFile_ins.CITY_NUM; j++) {
+			int num = j + Math.abs(new Random().nextInt(genes.size() -2));
 			result.add(genes.get(num));
 			genes.remove(num);
 		}
+		
 		genes.clear();
 		genes.addAll(result);
 		
