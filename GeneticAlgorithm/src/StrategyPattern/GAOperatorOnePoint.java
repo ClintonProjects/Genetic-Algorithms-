@@ -17,7 +17,7 @@ public class GAOperatorOnePoint extends GAOperator{
 
 		crossover = onePoint.getCrossover(); 
 		Mutation Mutation = onePoint.getMutation();
-		Selection selection=onePoint.getSelection();
+		Selection se=onePoint.getSelection();
 		
 		
 	}

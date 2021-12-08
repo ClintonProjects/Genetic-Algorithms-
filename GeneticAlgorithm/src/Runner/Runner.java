@@ -6,24 +6,26 @@ import GeneticAlgorithm.Individual;
 //import Re_constr.onePointCrossover;
 import GeneticAlgorithm.Population;
 import Singleton.ConfigurationFile;
-import Singleton.Singleton;
 import StrategyPattern.*;
 
 public class Runner {
 
 	public static void main(String... args) {
 		
-		ConfigurationFile ConfigurationFile_ins = Singleton.getInstance();
+		ConfigurationFile ConfigurationFile_ins = ConfigurationFile.getInstance();
 		
 		int DEVELOP_NUM=ConfigurationFile_ins.DEVELOP_NUM;
 		
+		Individual bestIndividualofAll =new Individual();
 		
-		while( DEVELOP_NUM < 0){
+		//get Population
 		Population p1=new Population();
-		
+		// get Operator
 		GAOperatorOnePoint GaOperatorOnePoint =new GAOperatorOnePoint();
-		
-		
+		GaOperatorOnePoint.se
+	// Start 	
+	while( DEVELOP_NUM < 0){
+
 	
 		Couple parent = GaOperatorOnePoint.selection.selection(p1);
 		
@@ -32,14 +34,18 @@ public class Runner {
 		Individual newChild=GaOperatorOnePoint.Mutation.Mutation(child);
 		
 	
-		// do a replace or just add to pa; 
+		// do a replace or just add to p1; 
 		
 		
 		DEVELOP_NUM--;
 		
+		//Individual bestOfthisgeiration = getBest(p1);
+	//	if(bestIndividualofall.getFitness()<)
+			
+		
 		}
 		
-		
+	//bestIndividualofall.print.
 	
 		
 		
