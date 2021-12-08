@@ -1,7 +1,7 @@
 package GenerticAlgorithmA;
 
-public class SelectionA implements GenerticAlgorithmA {
-
+public class TwoPointMutation implements GenerticAlgorithmA {
+	
 	@Override
 	public int getId() {
 		return 0;

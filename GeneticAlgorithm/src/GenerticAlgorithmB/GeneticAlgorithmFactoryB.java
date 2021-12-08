@@ -7,11 +7,11 @@ public class GeneticAlgorithmFactoryB implements AbstractFactory<GenerticAlgorit
 	@Override
 	public GenerticAlgorithmB create(String gaMethod) {
 		if ( gaMethod.equalsIgnoreCase("Selection"))
-			return new SelectionB();
+			return new TourmentSelection();
 		else if ( gaMethod.equalsIgnoreCase("Crossover")) 
-			return new MutationB();
+			return new OnePointMutation();
 		if ( gaMethod.equalsIgnoreCase("Mutation")) 
-			return new CrossoverB();
+			return new OnePointCrossover();
 		return null;
 	}
 }

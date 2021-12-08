@@ -1,9 +1,15 @@
 package Re_constr;
 
+import java.util.ArrayList;
+
+import Singleton.ConfigurationFile;
+import Singleton.Singleton;
+
 public class Population {
-	ConfigurationFile ConfigurationFile_ins =ConfigurationFile.getInstance();
+	ConfigurationFile ConfigurationFile_ins = Singleton.getInstance();
 	int speciesNum=ConfigurationFile_ins.SPECIES_NUM;//Number of individuals
-	Individual [] population=new Individual [speciesNum];
+	//Individual [] population=new Individual [speciesNum];
+	ArrayList<Individual> population= new ArrayList<Individual>();
 	
 	float bestFitness;
 	Individual bestIndividual;
@@ -17,19 +23,18 @@ public class Population {
 	
 	void createPopulation() {
 		for(int i=0;i<speciesNum;i++) {
-			
-			population[i]=new Individual();
+			population.set(i, new Individual());
 		}
 	}
 	
 	
 	void add(Individual newIndividual,int index )
 	{
-		population[index]=newIndividual;
+		population.set(index, new Individual());
 	}
 
 
-	public Individual[] getPopulation() {
+	public ArrayList<?> getPopulation() {
 		return population;
 	}
 }

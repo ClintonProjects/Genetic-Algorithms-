@@ -1,9 +1,10 @@
 package GenerticAlgorithmA;
 
-public class MutationA implements GenerticAlgorithmA {
-	
+public class TwoPointCrossOver implements GenerticAlgorithmA {
+
 	@Override
 	public int getId() {
 		return 0;
 	};
+
 }

@@ -1,5 +1,6 @@
 package Re_constr;
 
+import GeneticAlgorithm.Couple;
 
 public interface Crossover {
 	

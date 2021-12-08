@@ -1,31 +1,32 @@
 package GeneticAlgorithm;
 
+import Re_constr.Individual;
+
 public class Couple {
 
-	private Integer A;
-	private Integer B;
-	
-	public Couple(Integer a, Integer b) {
-		super();
-		A = a;
-		B = b;
+	//A couple is 2 Individuals
+	public Individual Individual1;
+	public Individual Individual2;
+
+	public Couple(Individual parent1, Individual parent2) {
+		this.Individual1 = parent1;
+		this.Individual2 = parent2;
 	}
 
-	public Integer getA() {
-		return A;
+	public Individual getIndividual1() {
+		return Individual1;
 	}
 
-	public void setA(Integer a) {
-		A = a;
+	public void setIndividual1(Individual individual1) {
+		Individual1 = individual1;
 	}
 
-	public Integer getB() {
-		return B;
+	public Individual getIndividual2() {
+		return Individual2;
 	}
 
-	public void setB(Integer b) {
-		B = b;
+	public void setIndividual2(Individual individual2) {
+		Individual2 = individual2;
 	}
-	
-	
 }
+

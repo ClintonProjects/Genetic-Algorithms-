@@ -1,7 +1,7 @@
 package GenerticAlgorithmB;
 
-public class CrossoverB implements GenerticAlgorithmB {
-
+public class OnePointMutation implements GenerticAlgorithmB {
+	
 	@Override
 	public String getId() {
 		return "";
