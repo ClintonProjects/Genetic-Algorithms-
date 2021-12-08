@@ -1,6 +1,6 @@
 package Singleton;
 
-public class Singleton {
+public class ConfigurationFileSingleton {
 	//push
 	private static volatile  ConfigurationFile instance;
 	

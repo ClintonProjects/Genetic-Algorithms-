@@ -4,11 +4,11 @@ package GeneticAlgorithm;
 import java.util.ArrayList;
 
 import GeneticAlgorithm.Individual;
-import Singleton.Singleton;
+import Singleton.ConfigurationFileSingleton;
 
 public class Population {
 	
-	int speciesNum = Singleton.getInstance().SPECIES_NUM;
+	int speciesNum = ConfigurationFileSingleton.getInstance().SPECIES_NUM;
 	ArrayList<Individual> population = new ArrayList<Individual>();
 
 	public Population() {
