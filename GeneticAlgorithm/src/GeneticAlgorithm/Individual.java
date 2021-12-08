@@ -5,11 +5,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 import Singleton.ConfigurationFile;
-import Singleton.Singleton;
+import Singleton.ConfigurationFileSingleton;
 
 public class Individual {
 	// ConfigurationFile;
-	ConfigurationFile ConfigurationFile_ins = Singleton.getInstance();
+	ConfigurationFile ConfigurationFile_ins = ConfigurationFileSingleton.getInstance();
 	public ArrayList<String> genes = new ArrayList<String>();
 
 	float fitness;//

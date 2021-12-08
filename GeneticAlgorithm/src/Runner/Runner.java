@@ -3,7 +3,6 @@ package Runner;
 import GenerticAlgorithmB.TourmentSelection;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
-import Re_constr.onePointCrossover;
 import GeneticAlgorithm.Population;
 
 public class Runner {
