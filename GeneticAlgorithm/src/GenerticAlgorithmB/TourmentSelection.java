@@ -7,8 +7,9 @@ import java.util.Random;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
+import Interfaces.Selection;
 
-public class TourmentSelection implements GenerticAlgorithmB {
+public class TourmentSelection implements GenerticAlgorithmB, Selection {
 
 	Population population;
 
@@ -29,7 +30,8 @@ public class TourmentSelection implements GenerticAlgorithmB {
 	// https://www.youtube.com/watch?v=9OXJapW8vqM
 	// https://www.youtube.com/watch?v=3JrpyuSHEWQ
 
-	public ArrayList<Individual> TouramentSelection(Population population) {
+	
+	public ArrayList<Individual> selection(Population population) {
 		ArrayList<Individual> newList = population.getPopulation();
 		ArrayList<Couple> listOfCouples = new ArrayList<Couple>();
 
@@ -85,5 +87,7 @@ public class TourmentSelection implements GenerticAlgorithmB {
 
 		return newList;
 	}
+
+
 
 }
