@@ -2,7 +2,7 @@ package GenerticAlgorithmA;
 
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
-import Interfaces.Crossover;
+import StrategyPattern.Crossover;
 
 public class TwoPointCrossOver implements  Crossover {
 

@@ -1,11 +1,11 @@
-package GenerticAlgorithmA;
+package GenerticAlgorithmB;
 
 import java.util.ArrayList;
 
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
-import Interfaces.Selection;
+import StrategyPattern.Selection;
 
 public class RouletteWheelSelection implements  Selection {
 

@@ -1,7 +1,7 @@
 package GenerticAlgorithmA;
 
 import GeneticAlgorithm.Couple;
-import Interfaces.Mutation;
+import StrategyPattern.Mutation;
 
 public class TwoPointMutation implements  Mutation {
 

@@ -1,10 +1,8 @@
-/GenerticAlgorithmB/
-/Re_constr/
-/GeneticAlgorithm/
-/Runner/
 /AbstractFactory/
 /GenerticAlgorithmA/
-/Factory1/
-/Singleton/
+/GenerticAlgorithmB/
+/GeneticAlgorithm/
 /Interfaces/
+/Runner/
+/Singleton/
 /StrategyPattern/

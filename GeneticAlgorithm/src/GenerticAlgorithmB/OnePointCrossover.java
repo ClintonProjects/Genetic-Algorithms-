@@ -1,12 +1,12 @@
-package GenerticAlgorithmB;
+package GenerticAlgorithmB;S
 
 import java.util.Random;
 
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
-import Interfaces.Crossover;
 import Singleton.ConfigurationFile;
 import Singleton.ConfigurationFileSingleton;
+import StrategyPattern.Crossover;
 
 public class OnePointCrossover implements Crossover {
 

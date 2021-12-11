@@ -1,8 +1,8 @@
 package AbstractFactory;
 
-import Interfaces.Crossover;
-import Interfaces.Mutation;
-import Interfaces.Selection;
+import StrategyPattern.Crossover;
+import StrategyPattern.Mutation;
+import StrategyPattern.Selection;
 
 public interface AbstractFactory  {
 	public Crossover getCrossover();

@@ -1,4 +1,4 @@
-package Interfaces;
+package StrategyPattern;
 
 import java.util.ArrayList;
 
@@ -7,5 +7,5 @@ import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 
 public interface Selection {
-	Couple selection(Population population);
+	Couple select(Population population);
 }

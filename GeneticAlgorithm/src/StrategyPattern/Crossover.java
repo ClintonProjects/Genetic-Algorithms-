@@ -1,10 +1,11 @@
-package Interfaces;
+package StrategyPattern;
 
+import AbstractFactory.FactoryProvider;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 
 public interface Crossover {
-
-	Individual crossover(Couple couple);
+	
+	Couple crossover(Couple couple);
 
 }

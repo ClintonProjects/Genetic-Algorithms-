@@ -2,8 +2,8 @@ package GenerticAlgorithmB;
 
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
-import Interfaces.Crossover;
-import Interfaces.Mutation;
+import StrategyPattern.Crossover;
+import StrategyPattern.Mutation;
 
 public class OnePointMutation implements Mutation {
 	

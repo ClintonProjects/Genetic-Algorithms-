@@ -1,4 +1,4 @@
-package GenerticAlgorithmB;
+package GenerticAlgorithmA;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.Random;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
-import Interfaces.Selection;
+import StrategyPattern.Selection;
 
 public class TourmentSelection implements Selection {
 

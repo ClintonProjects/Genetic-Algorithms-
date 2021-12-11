@@ -1,9 +1,10 @@
 package GenerticAlgorithmB;
 
 import AbstractFactory.AbstractFactory;
-import Interfaces.Crossover;
-import Interfaces.Mutation;
-import Interfaces.Selection;
+import GenerticAlgorithmA.TourmentSelection;
+import StrategyPattern.Crossover;
+import StrategyPattern.Mutation;
+import StrategyPattern.Selection;
 
 public class GeneticAlgorithmFactoryB implements AbstractFactory {
 
