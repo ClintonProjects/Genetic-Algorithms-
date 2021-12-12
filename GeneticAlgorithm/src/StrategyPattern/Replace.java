@@ -1,8 +1,8 @@
 package StrategyPattern;
 
 import GeneticAlgorithm.Individual;
-import GeneticAlgorithm.Population;
+import GeneticAlgorithm.*;
 
 public interface Replace {
-  void relace(Population p, Individual  individual);
+  void relace(Population p, Couple couple);
 }
