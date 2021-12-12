@@ -12,9 +12,6 @@ import StrategyPattern.*;
 
 public class GAcontroller {
 	
-public enum Color {  
-	  RED, GREEN, BLANK, YELLOW  
-	} 
 	String[] mode;
 	AbstractFactory OpratorFactory;
 
