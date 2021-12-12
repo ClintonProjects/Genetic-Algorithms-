@@ -21,7 +21,7 @@ public enum Color {
     Crossover crossover; 
     Mutation  mutator;
     Selection selector;
-    Replace  Replacer;
+    Replacer  Replacer;
     Individual bestIndividualOfAll;
 	ConfigurationFile ConfigurationFile_ins = ConfigurationFile.getInstance();
 	
@@ -51,7 +51,7 @@ public enum Color {
     	
     	Couple  parent = doSelection(population);
     	
-    	Couple  child =crossover.crossover(parent);
+    	Couple  child =crossover.doCross(parent);
     	
     	child=mutator.mutate(child);
     	

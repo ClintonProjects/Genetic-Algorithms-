@@ -14,7 +14,7 @@ public class GeneticAlgorithmFactoryA implements AbstractFactory {
 	@Override
 	public Crossover getCrossover() {
 		// TODO Auto-generated method stub
-		return new TwoPointCrossOver();
+		return new TwoPointCrossover();
 	}
 
 	@Override

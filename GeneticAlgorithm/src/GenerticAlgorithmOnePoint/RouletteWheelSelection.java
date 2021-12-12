@@ -46,7 +46,7 @@ public class RouletteWheelSelection implements  Selection {
 			}
 		}
 
-		Population newPopulation=new Population();
+	
 		int talentNum=(int)(population.getPopulation().size()/5);
 		for(int i=1;i<=talentNum;i++)
 		{
