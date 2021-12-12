@@ -1,7 +1,7 @@
 package GenerticAlgorithmA;
 
 import AbstractFactory.AbstractFactory;
-import GenerticAlgorithmB.RouletteWheelSelection;
+import GenerticAlgorithmOnePoint.RouletteWheelSelection;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;

@@ -5,5 +5,6 @@ import GeneticAlgorithm.Individual;
 
 public interface Mutation {
 	
-	Couple mutate(Individual  Couple );
+	Couple mutate(Couple couple );
+
 }

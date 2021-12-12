@@ -1,4 +1,6 @@
 package Runner;
+import java.util.ListIterator;
+
 import AbstractFactory.AbstractFactory;
 import AbstractFactory.FactoryProvider;
 import GeneticAlgorithm.Couple;
@@ -22,15 +24,18 @@ public enum Color {
     Replace  Replacer;
     Individual bestIndividualOfAll;
 	ConfigurationFile ConfigurationFile_ins = ConfigurationFile.getInstance();
+	
+	
+
 	public GAcontroller(String[] mode){
 		this.mode=mode;	
 	    OpratorFactory= FactoryProvider.getFactory(mode[1]);
 		crossover =  OpratorFactory.getCrossover(); 
 		mutator = OpratorFactory.getMutation();
 		selector= OpratorFactory.getSelection();
-	
 		
 	}
+	
 	public GAcontroller(){
 		
 	    OpratorFactory= FactoryProvider.getFactory("B");
@@ -40,14 +45,25 @@ public enum Color {
 		
 	}
 	Individual run(Population population) {
+		int DEVELOP_NUM=ConfigurationFile_ins.DEVELOP_NUM;
+		
+		while( DEVELOP_NUM < 0){
     	
-    	Population p = new Population();
-    	
-    	Couple  parent = doSelection(p);
+    	Couple  parent = doSelection(population);
     	
     	Couple  child =crossover.crossover(parent);
-		return bestIndividualOfAll;
     	
+    	child=mutator.mutate(child);
+    	
+    	Replacer.relace(population, child);
+    	Individual bestIndiviOfNew=getBest(population);
+    	
+    	if(bestIndividualOfAll.getFitness()<bestIndiviOfNew.getFitness())
+    	bestIndividualOfAll=bestIndiviOfNew;	
+    	
+    	DEVELOP_NUM--;
+		}
+		return bestIndividualOfAll;	
     }
     
     Couple doSelection(Population p){
@@ -65,4 +81,21 @@ public enum Color {
 		    selector=OpratorFactory.getSelection();
 	}
 	
+	Individual getBest(Population p)
+	{
+		float distance=Float.MAX_VALUE;
+		Individual bestSpecies=null;
+		ListIterator<Individual> P_iterator =p.getPopulation().listIterator();
+		while(P_iterator.hasNext())
+		{
+			if(P_iterator.next().getFitness()<distance)
+			{
+				bestSpecies=P_iterator.previous();
+
+				distance=P_iterator.next().getFitness();		
+			}
+		}
+		return bestSpecies;
+	}
+
 }

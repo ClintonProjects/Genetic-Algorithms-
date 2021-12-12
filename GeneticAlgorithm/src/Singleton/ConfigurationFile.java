@@ -6,10 +6,12 @@ public class ConfigurationFile {
 
 	public final int SPECIES_NUM = 20;
 	public final int DEVELOP_NUM = 1000;
-	public final float pcl = 0.6f;
+	//public final float pcl = 0.6f;
+	public final float pcl = 0.0f;
 
 	public final float pch = 0.95f;
-	final float pm = 0.4f;
+	//public final float pm = 0.4f;
+	public final float pm = 0.99f;
 
 	int[][] cityPosition = { { 60, 200 }, { 180, 200 }, { 80, 180 }, { 140, 180 }, { 20, 160 }, { 100, 160 }, { 200, 160 }, { 140, 140 }, { 40, 120 },
 			{ 100, 120 }, { 180, 100 }, { 60, 80 }, { 120, 80 }, { 180, 60 }, { 20, 40 }, { 100, 40 }, { 200, 40 }, { 20, 20 }, { 60, 20 },

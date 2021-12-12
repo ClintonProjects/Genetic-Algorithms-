@@ -1,7 +1,8 @@
 package AbstractFactory;
 
 import GenerticAlgorithmA.GeneticAlgorithmFactoryA;
-import GenerticAlgorithmB.GeneticAlgorithmFactoryB;
+import GenerticAlgorithmOnePoint.*;
+import GenerticAlgorithmOnePoint.GeneticAlgorithmFactoryOnePoint;
 
 
 public class FactoryProvider {
@@ -9,10 +10,10 @@ public class FactoryProvider {
 	
 	public static AbstractFactory getFactory(String choice) {
 
-		if (choice.equalsIgnoreCase("A")) {
+		if (choice.equalsIgnoreCase("TWo Point")) {
 			return new GeneticAlgorithmFactoryA();
-		} else if (choice.equalsIgnoreCase("B")) {
-			return new GeneticAlgorithmFactoryB();
+		} else if (choice.equalsIgnoreCase("One Point")) {
+			return new GeneticAlgorithmFactoryOnePoint();
 		}
 		return null;
 	}

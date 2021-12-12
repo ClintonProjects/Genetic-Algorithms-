@@ -6,6 +6,6 @@ import GeneticAlgorithm.Individual;
 
 public interface Crossover {
 	
-	Couple crossover(Couple couple);
+	Couple doCross(Couple couple);
 
 }

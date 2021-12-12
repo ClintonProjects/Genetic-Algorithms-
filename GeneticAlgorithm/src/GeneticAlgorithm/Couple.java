@@ -7,7 +7,7 @@ public class Couple {
 	//A couple is 2 Individuals
 	public Individual Individual1;
 	public Individual Individual2;
-
+	public Couple() {}
 	public Couple(Individual parent1, Individual parent2) {
 		this.Individual1 = parent1;
 		this.Individual2 = parent2;
@@ -28,5 +28,17 @@ public class Couple {
 	public void setIndividual2(Individual individual2) {
 		Individual2 = individual2;
 	}
+	
+	public Couple deepCopy(){                    
+		Couple dest = new Couple();      
+        dest.Individual1=this.Individual1.deepCopy();
+        dest.Individual2=this.Individual2.deepCopy();
+		return dest;       
+		
+		
+	} 
+	
+	
+	
 }
 

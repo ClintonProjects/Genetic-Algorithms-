@@ -1,4 +1,4 @@
-package GenerticAlgorithmB;
+package GenerticAlgorithmOnePoint;
 
 import java.util.ArrayList;
 
@@ -9,8 +9,9 @@ import StrategyPattern.Selection;
 
 public class RouletteWheelSelection implements  Selection {
 
+
 	@Override
-	public Couple selection(Population population) {
+	public Couple select(Population population) {
 		// TODO Auto-generated method stub
 		return null;
 	}

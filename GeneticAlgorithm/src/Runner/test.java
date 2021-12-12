@@ -1,8 +1,13 @@
 package Runner;
 
+import java.io.IOException;
+
 import AbstractFactory.AbstractFactory;
 import AbstractFactory.FactoryProvider;
 import GenerticAlgorithmA.TourmentSelection;
+import GenerticAlgorithmA.TwoPointCrossover;
+import GenerticAlgorithmOnePoint.OnePointCrossover;
+import GenerticAlgorithmOnePoint.OnePointMutation;
 import GeneticAlgorithm.*;
 import GeneticAlgorithm.Individual;
 //import Re_constr.onePointCrossover;
@@ -12,26 +17,28 @@ import StrategyPattern.*;
 
 public class test {
 
-	public static void main(String... args) {
+	public static void main(String... args) throws ClassNotFoundException, IOException {
 		
-		AbstractFactory onePointFactory =  new FactoryProvider().getFactory("A");
-	    Crossover crossover; 
-	    Mutation Mutation;
-	    Selection selection;
-		
-		crossover = onePointFactory.getCrossover(); 
-		Mutation mutation = onePointFactory.getMutation();
-		Selection se=onePointFactory.getSelection();
-		
-		ConfigurationFile ConfigurationFile_ins = ConfigurationFile.getInstance();
-		
-		int DEVELOP_NUM=ConfigurationFile_ins.DEVELOP_NUM;
-		
-		Individual bestIndividualofAll =new Individual();
-	
-		GAcontroller onePoint=new GAcontroller();
-		onePoint.setSelection("Tournament");
+//		Individual ind1= new Individual();
+//		Individual ind2= new Individual();
+//
+////		ind1.printRate();
+////		ind2.printRate();
 //		
+//		Couple cou=new Couple(ind1,ind2);
+//	    cou.Individual1.printRate();
+//	    cou.Individual2.printRate();
+//	    
+//	    Couple cou1=cou.deepCopy();
+//	
+//	    cou.Individual1.genes.set(0, "11");
+//	      cou.Individual1.printRate();  
+//	    cou1.Individual1.printRate();
+//	    cou1.Individual2.printRate();
+//	    
+	    
+	    
+//		Couple cou=new Couple(ind1,ind2);
 //		//get Population
 //		Population p1=new Population();
 //		// get Operator
@@ -97,23 +104,46 @@ public class test {
 //        p1.population[i].printRate();
 //		   }
 
-	//	Individual ind1 = new Individual();
+	//	
 		//ind1.getGenes().forEach(i -> System.out.println(i));
 	//	System.out.println(new TourmentSelection().selection(new Population()).size());
 		
 		
 		
 		
-		
-//		ind1.printRate();
+//		Individual ind1 = new Individual();
 //		Individual ind2 = new Individual();
 //		Couple cou1 = new Couple(ind1, ind2);
+//	//	cou1.Individual1.printRate();
+//	//	cou1.Individual2.printRate();
+//		
+//		
+//		TwoPointCrossover cros1 = new TwoPointCrossover();
+//		Couple newcouple=cros1.doCross(cou1);
 //		cou1.Individual1.printRate();
 //		cou1.Individual2.printRate();
-//		onePointCrossover cros1 = new onePointCrossover();
-//		cros1.doCross(cou1);
-//		cou1.Individual1.printRate();
-//		cou1.Individual2.printRate();
+//		
+//		newcouple.Individual1.printRate();
+//		newcouple.Individual2.printRate();
+		
+		
+//		Individual ind1 = new Individual();
+//		OnePointMutation mu1=new OnePointMutation();
+//		Individual ind2=mu1.mutate(ind1);
+//		ind1.printRate();
+//		ind2.printRate();
+		
+		OnePointMutation mu1=new OnePointMutation();
+		Individual ind1 = new Individual();
+		Individual ind2 = new Individual();
+		Couple cou0=new Couple(ind1,ind2);      
+		cou0.Individual1.printRate();
+        cou0.Individual2.printRate();
+		Couple cou1=mu1.mutate(cou0);
+
+	
+        cou1.Individual1.printRate();
+        cou1.Individual2.printRate();
 
 	}
 

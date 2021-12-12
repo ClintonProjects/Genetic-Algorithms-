@@ -1,4 +1,4 @@
-package GenerticAlgorithmB;
+package GenerticAlgorithmOnePoint;
 
 import AbstractFactory.AbstractFactory;
 import GenerticAlgorithmA.TourmentSelection;
@@ -6,7 +6,7 @@ import StrategyPattern.Crossover;
 import StrategyPattern.Mutation;
 import StrategyPattern.Selection;
 
-public class GeneticAlgorithmFactoryB implements AbstractFactory {
+public class GeneticAlgorithmFactoryOnePoint implements AbstractFactory {
 
 	@Override
 	public Crossover getCrossover() {
