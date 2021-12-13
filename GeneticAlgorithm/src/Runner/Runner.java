@@ -6,6 +6,50 @@ public class Runner {
 
 	public static void main(String... args) {
 		
+		
+		
+		
+		/*
+		 * Population
+		 * Selection
+		 * Crossover
+		 * mutation
+		 * Fitness
+		 * replacement back into the population
+		 * 
+		 * 
+		 * example
+		 * 
+		 * Population = new Popualtion();
+		 * Selection = new Selection(Population);
+		 * Mutation = new Mutation();
+		 * Fitness f = new Fitness();
+		 * Replacement  r= new Replacement();
+		 * 
+		 * This should all run in a loop.
+		 * 
+		 * 
+		 * Grading Scheme:
+		 * 
+		 * Data abstraction used appropriately throughout
+		 * 
+		 * Information hiding present and appropriate throughout
+		 * 
+		 * Separation of behavior and implementation particularly with respect to the Strategy & Factory design patterns
+		 * 
+		 * Multiple-file or multiple-module programming solution submitted - classes, subclasses (class hierarchies/inheritance), generics and polymorphism used appropriately to reuse existing design and code throughout.
+		 * 
+		 * Programming solution submitted creates data structures that can be objectively judged to be cohesive (facilitate maintenance), facilitate reuse/extensibility, adhere to the principle of substitutability and the open-closed principle – and reuse existing libraries where appropriate.
+		 *
+		 *
+		 *Singleton pattern correctly applied to allow a single instance of a class to be created only.
+		 *
+		 *Strategy pattern correctly applied to allow dynamic change of behaviour at runtime
+		 *
+		 *Factory pattern correctly applied to handle instantiation of GA operator objects.
+		 *
+		 */
+		
 		Population p1=new Population();
 		//get the population
 		
