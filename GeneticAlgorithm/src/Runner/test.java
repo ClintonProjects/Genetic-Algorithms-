@@ -12,7 +12,6 @@ import GeneticAlgorithm.*;
 import GeneticAlgorithm.Individual;
 //import Re_constr.onePointCrossover;
 import GeneticAlgorithm.Population;
-import Singleton.ConfigurationFile;
 import StrategyPattern.*;
 
 public class test {

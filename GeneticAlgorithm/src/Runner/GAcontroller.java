@@ -7,6 +7,7 @@ import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 import Singleton.ConfigurationFile;
+import Singleton.ConfigurationFileSingleton;
 import StrategyPattern.*;
 
 
@@ -20,7 +21,7 @@ public class GAcontroller {
     Selection selector;
     Replacer  Replacer;
     Individual bestIndividualOfAll;
-	ConfigurationFile ConfigurationFile_ins = ConfigurationFile.getInstance();
+	ConfigurationFile ConfigurationFile_ins = ConfigurationFileSingleton.getInstance();
 	
 	
 
