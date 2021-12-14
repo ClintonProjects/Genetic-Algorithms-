@@ -18,9 +18,9 @@ public class RouletteWheelSelection implements  Selection {
 	
 	public Couple select(Population population) {
 		Couple newCouple= new Couple();
-		newCouple.Individual1=this.selectIndvidual(population).deepCopy();
+		newCouple.Individual1=this.selectIndvidual(population);
 		
-		newCouple.Individual2=this.selectIndvidual(population).deepCopy();
+		newCouple.Individual2=this.selectIndvidual(population);
 		
 		return newCouple;
 		
@@ -28,45 +28,39 @@ public class RouletteWheelSelection implements  Selection {
 	public Individual selectIndvidual(Population population) {
 		// TODO Auto-generated method stub
 		FitnessEvaluator fitnessEvaluator=new FitnessEvaluator();
+		
 		fitnessEvaluator.updateFitness(population);
-		
-		Individual talentSpecies=null;
-		
+
 		Individual SelectedIndiv=null;
 		
 		ListIterator<Individual> P_iterator =population.getPopulation().listIterator();
-		float talentDis=Float.MAX_VALUE;
+		
 		float totalDis=0;
-		while(P_iterator.hasNext())
-		{
-			if(talentDis > P_iterator.next().getFitness())
-			{
-				talentDis=P_iterator.next().getFitness();
-				talentSpecies=P_iterator.next().deepCopy();
-			}
-		}
+		
 
-	
-		int talentNum=(int)(population.getPopulation().size()/5);
-		for(int i=1;i<=talentNum;i++)
-		{
-			Individual newSpecies=talentSpecies.deepCopy();
-			population.getPopulation().add(newSpecies);
-	
-		}
-		fitnessEvaluator.updateFitness(population);
-		P_iterator =population.getPopulation().listIterator();
 		while(P_iterator.hasNext()) {
+			
 		totalDis+=P_iterator.next().getFitness();
+	    
 		}
 		
 		float r = (float) (Math.random()*totalDis);
+		float sum = 0;
+		//System.out.println("totalDis is: "+totalDis);
+		
 		
 		P_iterator =population.getPopulation().listIterator();
-		while(P_iterator.hasNext()&&P_iterator.next()!=talentSpecies){
-			float sum = 0;
+		
+		while(P_iterator.hasNext()){
+			
+			 
 			sum+=P_iterator.next().getFitness();
+			
+			//System.out.println("sum is: "+sum);
+			// System.out.println("r is: "+r);
 			if(sum>r) {
+			//	System.out.println("new sum is: "+sum);
+			//	 System.out.println("new r is: "+r);
 				SelectedIndiv=P_iterator.previous().deepCopy();
 				break;
 			}			
@@ -74,6 +68,29 @@ public class RouletteWheelSelection implements  Selection {
 		
 		return SelectedIndiv;
 		
+	}
+	
+	void elistic(Population population) {
+		ListIterator<Individual> P_iterator =population.getPopulation().listIterator();
+		float talentDis=Float.MAX_VALUE;
+	
+		Individual talentSpecies=null;
+		while(P_iterator.hasNext())
+		{
+			if(talentDis > P_iterator.next().getFitness())
+			{
+				talentDis=P_iterator.previous().getFitness();
+				talentSpecies=P_iterator.next().deepCopy();
+			}
+		}
+		
+		int talentNum=(int)(population.getPopulation().size()/5);
+		for(int i=1;i<=talentNum;i++)
+		{
+			Individual newSpecies=talentSpecies.deepCopy();
+			population.getPopulation().add(newSpecies);
+	
+		}
 	}
 
 }

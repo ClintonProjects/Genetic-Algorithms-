@@ -21,7 +21,7 @@ public class GAcontroller {
     Mutation  mutator;
     Selection selector;
     Replacer  Replacer;
-    Individual bestIndividualOfAll;
+    Individual bestIndividualOfAll=new Individual() ;
 	ConfigurationFile ConfigurationFile_ins = ConfigurationFileSingleton.getInstance();
 	
 	
@@ -37,7 +37,7 @@ public class GAcontroller {
 	
 	public GAcontroller(){
 		
-	    OpratorFactory= FactoryProvider.getFactory("Two Point");
+	    OpratorFactory= FactoryProvider.getFactory("One Point");
 		crossover =  OpratorFactory.getCrossover(); 
 		mutator = OpratorFactory.getMutation();
 		selector= OpratorFactory.getSelection();
@@ -54,11 +54,17 @@ public class GAcontroller {
     	
     	child=mutator.mutate(child);
     	
-    	Replacer.relace(child, population);
+    	doReplace(child,population);
+    	
     	Individual bestIndiviOfNew=getBest(population);
+    	
+    	
     	bestIndiviOfNew.printRate();
-    	if(bestIndividualOfAll.getFitness()<bestIndiviOfNew.getFitness())
+    	
+    	if(bestIndividualOfAll.getFitness()>bestIndiviOfNew.getFitness())
+    		
     	bestIndividualOfAll=bestIndiviOfNew;	
+    	
     	DEVELOP_NUM--;
     	
 		}
@@ -76,7 +82,7 @@ public class GAcontroller {
     
 	void doReplace(Couple couple, Population p){
 		Replacer= new Replace();
-		Replacer.relace(couple, p);
+		Replacer.doRelace(couple, p);
 	}
 	
 	void setSelection(String mode){
@@ -86,21 +92,23 @@ public class GAcontroller {
 	}
 	
 	
-	public Individual getBest(Population p)
-	{
+	Individual getBest(Population p)
+	  {
 		float distance=Float.MAX_VALUE;
 		Individual bestSpecies=null;
 		ListIterator<Individual> P_iterator =p.getPopulation().listIterator();
+		//System.out.println(" new fitness is"+ P_iterator.next().getFitness());
 		while(P_iterator.hasNext())
 		{
 			if(P_iterator.next().getFitness()<distance)
 			{
 				bestSpecies=P_iterator.previous();
-
+			//	System.out.println(" new fitness is"+ P_iterator.next().getFitness());
 				distance=P_iterator.next().getFitness();		
 			}
 		}
-		return bestSpecies;
-	}
+		P_iterator =p.getPopulation().listIterator();
 
+		return bestSpecies;
+	  }
 }

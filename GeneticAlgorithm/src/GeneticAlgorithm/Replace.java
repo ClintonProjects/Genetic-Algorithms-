@@ -7,13 +7,17 @@ import StrategyPattern.*;
 public class Replace implements Replacer{
 
 	@Override
-	public void relace( Couple couple,Population p) {
-		// TODO Auto-generated method stub
-
+	public void doRelace( Couple couple,Population p) {
+		System.out.println("doReplace");
+	//	System.out.println("index is: "+p.population.indexOf(this.getWeakest(p)));
 		
+	
 		p.population.set(p.population.indexOf(this.getWeakest(p)),couple.Individual1);
 		
-		p.population.set(p.population.indexOf(this.getWeakest(p)),couple.Individual2);
+	//	System.out.println("index is: "+p.population.indexOf(this.getWeakest(p)));
+	    p.population.set(p.population.indexOf(this.getWeakest(p)),couple.Individual2);
+	    
+	  //  System.out.println("index is: "+p.population.indexOf(this.getWeakest(p)));
 		
 		
 	}
@@ -21,19 +25,33 @@ public class Replace implements Replacer{
 
 Individual getWeakest(Population p)
   {
-	float distance=Float.MAX_VALUE;
+	float distance=0;
 	Individual bestSpecies=null;
 	ListIterator<Individual> P_iterator =p.getPopulation().listIterator();
+	//System.out.println(" new fitness is"+ P_iterator.next().getFitness());
 	while(P_iterator.hasNext())
 	{
 		if(P_iterator.next().getFitness()>distance)
 		{
 			bestSpecies=P_iterator.previous();
-
-			distance=P_iterator.next().getFitness();		
+			System.out.println(" new fitness is"+ P_iterator.next().getFitness());
+			distance=P_iterator.previous().getFitness();	
+			//distance=P_iterator.next().getFitness();		
 		}
 	}
+	P_iterator =p.getPopulation().listIterator();
+	PrintFitness(p);
 	return bestSpecies;
   }
 
-}
+		 void PrintFitness(Population p) {
+			 ListIterator<Individual> P_iterator =p.getPopulation().listIterator();
+	
+				while(P_iterator.hasNext())
+				{
+					
+					System.out.println(" population fitness is"+ P_iterator.next().getFitness());	
+					}
+				}
+ }
+

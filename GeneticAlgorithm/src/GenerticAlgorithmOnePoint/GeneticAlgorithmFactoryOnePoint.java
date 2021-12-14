@@ -23,9 +23,8 @@ public class GeneticAlgorithmFactoryOnePoint implements AbstractFactory {
 	@Override
 	public Selection getSelection() {
 		// TODO Auto-generated method stub
-		return new TourmentSelection();
+		return new RouletteWheelSelection();
 	}
-
 
 
 }

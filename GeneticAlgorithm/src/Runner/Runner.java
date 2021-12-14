@@ -59,6 +59,8 @@ public class Runner {
 	//	GA1.setSelection("Tournament");
 		// we can change the the strategy of selection Algorithm
 		Individual bestRate=GA1.run(p1);
+		System.out.println(" runner best");
+		bestRate.printRate();
 		//get best Individual
 		
 		//bestRate.printRate();

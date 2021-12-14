@@ -5,5 +5,8 @@ import GeneticAlgorithm.*;
 
 public interface Replacer {
 	//
-  void relace(Couple couple, Population p);
+  void doRelace(Couple couple, Population p);
+  
+  
+  
 }

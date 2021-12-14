@@ -2,8 +2,8 @@ package Singleton;
 
 public class ConfigurationFile {
 
-	public final int SPECIES_NUM = 20;
-	public final int DEVELOP_NUM = 1000;
+	public final int SPECIES_NUM = 100;
+	public final int DEVELOP_NUM = 1000;//1000
 	//public final float pcl = 0.6f;
 	public final float pcl = 0.0f;
 
