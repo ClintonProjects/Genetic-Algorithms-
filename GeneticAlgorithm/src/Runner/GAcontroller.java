@@ -6,6 +6,7 @@ import AbstractFactory.FactoryProvider;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
+import GeneticAlgorithm.Replace;
 import Singleton.ConfigurationFile;
 import Singleton.ConfigurationFileSingleton;
 import StrategyPattern.*;
@@ -36,7 +37,7 @@ public class GAcontroller {
 	
 	public GAcontroller(){
 		
-	    OpratorFactory= FactoryProvider.getFactory("B");
+	    OpratorFactory= FactoryProvider.getFactory("Two Point");
 		crossover =  OpratorFactory.getCrossover(); 
 		mutator = OpratorFactory.getMutation();
 		selector= OpratorFactory.getSelection();
@@ -45,22 +46,24 @@ public class GAcontroller {
 	Individual run(Population population) {
 		int DEVELOP_NUM=ConfigurationFile_ins.DEVELOP_NUM;
 		
-		while( DEVELOP_NUM < 0){
+		while( DEVELOP_NUM > 0){
     	
     	Couple  parent = doSelection(population);
-    	
+    	parent.Individual1.printRate();
     	Couple  child =crossover.doCross(parent);
     	
     	child=mutator.mutate(child);
     	
-    	Replacer.relace(population, child);
+    	Replacer.relace(child, population);
     	Individual bestIndiviOfNew=getBest(population);
-    	
+    	bestIndiviOfNew.printRate();
     	if(bestIndividualOfAll.getFitness()<bestIndiviOfNew.getFitness())
     	bestIndividualOfAll=bestIndiviOfNew;	
-    	
     	DEVELOP_NUM--;
+    	
 		}
+		
+		
 		return bestIndividualOfAll;	
     }
     
@@ -71,7 +74,10 @@ public class GAcontroller {
 
       }
     
-	void doReplace(){};
+	void doReplace(Couple couple, Population p){
+		Replacer= new Replace();
+		Replacer.relace(couple, p);
+	}
 	
 	void setSelection(String mode){
 		if(mode.equals("Tournament"))
@@ -79,7 +85,8 @@ public class GAcontroller {
 		    selector=OpratorFactory.getSelection();
 	}
 	
-	Individual getBest(Population p)
+	
+	public Individual getBest(Population p)
 	{
 		float distance=Float.MAX_VALUE;
 		Individual bestSpecies=null;

@@ -1,4 +1,4 @@
-package GenerticAlgorithmA;
+package GenerticAlgorithmTwoPoint;
 
 import java.util.Random;
 

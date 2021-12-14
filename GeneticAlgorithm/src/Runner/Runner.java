@@ -39,7 +39,7 @@ public class Runner {
 		 * 
 		 * Multiple-file or multiple-module programming solution submitted - classes, subclasses (class hierarchies/inheritance), generics and polymorphism used appropriately to reuse existing design and code throughout.
 		 * 
-		 * Programming solution submitted creates data structures that can be objectively judged to be cohesive (facilitate maintenance), facilitate reuse/extensibility, adhere to the principle of substitutability and the open-closed principle – and reuse existing libraries where appropriate.
+		 * Programming solution submitted creates data structures that can be objectively judged to be cohesive (facilitate maintenance), facilitate reuse/extensibility, adhere to the principle of substitutability and the open-closed principle ï¿½ and reuse existing libraries where appropriate.
 		 *
 		 *
 		 *Singleton pattern correctly applied to allow a single instance of a class to be created only.
@@ -56,11 +56,11 @@ public class Runner {
 		GAcontroller GA1=new GAcontroller();
 		//get a controller, which can get all of the Algorithm and also this Algorithm can be set
 		
-		GA1.setSelection("Tournament");
+	//	GA1.setSelection("Tournament");
 		// we can change the the strategy of selection Algorithm
 		Individual bestRate=GA1.run(p1);
 		//get best Individual
 		
-		bestRate.printRate();
+		//bestRate.printRate();
 }
 }

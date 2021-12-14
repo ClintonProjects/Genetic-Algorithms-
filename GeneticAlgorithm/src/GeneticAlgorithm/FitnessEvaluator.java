@@ -31,4 +31,40 @@ public class FitnessEvaluator {
 	}
 	
 	
+	public Individual getBest(Population p)
+	{
+		float distance=Float.MAX_VALUE;
+		Individual bestSpecies=null;
+		ListIterator<Individual> P_iterator =p.getPopulation().listIterator();
+		while(P_iterator.hasNext())
+		{
+			if(P_iterator.next().getFitness()<distance)
+			{
+				bestSpecies=P_iterator.previous();
+
+				distance=P_iterator.next().getFitness();		
+			}
+		}
+		return bestSpecies;
+	}
+	
+	
+	public Individual getWeakest(Population p)
+	  {
+		float distance=Float.MAX_VALUE;
+		Individual bestSpecies=null;
+		ListIterator<Individual> P_iterator =p.getPopulation().listIterator();
+		while(P_iterator.hasNext())
+		{
+			if(P_iterator.next().getFitness()>distance)
+			{
+				bestSpecies=P_iterator.previous();
+
+				distance=P_iterator.next().getFitness();		
+			}
+		}
+		return bestSpecies;
+	  }
+	
+	
 }

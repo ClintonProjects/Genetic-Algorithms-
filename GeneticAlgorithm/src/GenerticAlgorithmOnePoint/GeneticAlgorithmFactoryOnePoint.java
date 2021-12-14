@@ -1,7 +1,7 @@
 package GenerticAlgorithmOnePoint;
 
 import AbstractFactory.AbstractFactory;
-import GenerticAlgorithmA.TourmentSelection;
+import GenerticAlgorithmTwoPoint.TourmentSelection;
 import StrategyPattern.Crossover;
 import StrategyPattern.Mutation;
 import StrategyPattern.Selection;

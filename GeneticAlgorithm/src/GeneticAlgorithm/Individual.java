@@ -86,9 +86,7 @@ public class Individual  implements Serializable{
 		for(String code:this.genes ){	
 			dest.genes.add(code);
 		}
-		return dest;       
-		
-		
+		return dest;       	
 	}
 
 	public Object getPopulation() {
