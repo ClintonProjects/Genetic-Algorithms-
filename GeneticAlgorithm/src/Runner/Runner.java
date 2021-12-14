@@ -61,8 +61,10 @@ public class Runner {
 		Individual bestRate=GA1.run(p1);
 		System.out.println(" runner best");
 		bestRate.printRate();
+		GA1.PrintFitness(GA1.generationBestFitness);
+		
 		//get best Individual
 		
-		//bestRate.printRate();
+		bestRate.printRate();
 }
 }

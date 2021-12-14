@@ -1,9 +1,11 @@
 package Runner;
+import java.util.ArrayList;
 import java.util.ListIterator;
 
 import AbstractFactory.AbstractFactory;
 import AbstractFactory.FactoryProvider;
 import GeneticAlgorithm.Couple;
+import GeneticAlgorithm.FitnessEvaluator;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 import GeneticAlgorithm.Replace;
@@ -24,6 +26,7 @@ public class GAcontroller {
     Individual bestIndividualOfAll=new Individual() ;
 	ConfigurationFile ConfigurationFile_ins = ConfigurationFileSingleton.getInstance();
 	
+	public ArrayList<Float> generationBestFitness = new ArrayList<Float>();
 	
 
 	public GAcontroller(String[] mode){
@@ -43,13 +46,15 @@ public class GAcontroller {
 		selector= OpratorFactory.getSelection();
 		
 	}
-	Individual run(Population population) {
+	Individual run(Population population)
+	{
 		int DEVELOP_NUM=ConfigurationFile_ins.DEVELOP_NUM;
 		
 		while( DEVELOP_NUM > 0){
-    	
+			elistic(population);
+		System.out.println(population.getPopulation().size());
     	Couple  parent = doSelection(population);
-    	parent.Individual1.printRate();
+ 
     	Couple  child =crossover.doCross(parent);
     	
     	child=mutator.mutate(child);
@@ -59,17 +64,16 @@ public class GAcontroller {
     	Individual bestIndiviOfNew=getBest(population);
     	
     	
-    	bestIndiviOfNew.printRate();
+    	//bestIndiviOfNew.printRate();
+    	generationBestFitness.add(bestIndiviOfNew.getFitness());
     	
     	if(bestIndividualOfAll.getFitness()>bestIndiviOfNew.getFitness())
     		
     	bestIndividualOfAll=bestIndiviOfNew;	
-    	
+
     	DEVELOP_NUM--;
     	
 		}
-		
-		
 		return bestIndividualOfAll;	
     }
     
@@ -107,8 +111,42 @@ public class GAcontroller {
 				distance=P_iterator.next().getFitness();		
 			}
 		}
-		P_iterator =p.getPopulation().listIterator();
-
 		return bestSpecies;
 	  }
+	
+	 void PrintFitness(ArrayList p) {
+		 ListIterator<Float> P_iterator =p.listIterator();
+
+			while(P_iterator.hasNext())
+			{	System.out.println(" population fitness is"+ P_iterator.next());	
+				
+			}
+       }
+	 
+	 
+		void elistic(Population population) {
+			
+			FitnessEvaluator fitnessEvaluator=new FitnessEvaluator();
+			Individual BestSpecies=fitnessEvaluator.getBest(population);
+			int talentNum=(int)2;
+			
+			
+			for(int i=1;i<=talentNum;i++)
+			{
+				Individual newSpecies=BestSpecies.deepCopy();
+				population.getPopulation().add(newSpecies);
+		
+			}
+		}
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 }

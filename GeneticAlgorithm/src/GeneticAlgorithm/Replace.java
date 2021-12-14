@@ -8,7 +8,7 @@ public class Replace implements Replacer{
 
 	@Override
 	public void doRelace( Couple couple,Population p) {
-		System.out.println("doReplace");
+		//System.out.println("doReplace");
 	//	System.out.println("index is: "+p.population.indexOf(this.getWeakest(p)));
 		
 	
@@ -34,13 +34,13 @@ Individual getWeakest(Population p)
 		if(P_iterator.next().getFitness()>distance)
 		{
 			bestSpecies=P_iterator.previous();
-			System.out.println(" new fitness is"+ P_iterator.next().getFitness());
-			distance=P_iterator.previous().getFitness();	
-			//distance=P_iterator.next().getFitness();		
+			//System.out.println(" new fitness is"+ P_iterator.next().getFitness());
+			//distance=P_iterator.previous().getFitness();	
+		distance=P_iterator.next().getFitness();		
 		}
 	}
 	P_iterator =p.getPopulation().listIterator();
-	PrintFitness(p);
+	//PrintFitness(p);
 	return bestSpecies;
   }
 

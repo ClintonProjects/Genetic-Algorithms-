@@ -13,9 +13,7 @@ import StrategyPattern.Selection;
 public class RouletteWheelSelection implements  Selection {
 
 
-	@Override
-	
-	
+	FitnessEvaluator fitnessEvaluator=new FitnessEvaluator();
 	public Couple select(Population population) {
 		Couple newCouple= new Couple();
 		newCouple.Individual1=this.selectIndvidual(population);
@@ -70,27 +68,6 @@ public class RouletteWheelSelection implements  Selection {
 		
 	}
 	
-	void elistic(Population population) {
-		ListIterator<Individual> P_iterator =population.getPopulation().listIterator();
-		float talentDis=Float.MAX_VALUE;
-	
-		Individual talentSpecies=null;
-		while(P_iterator.hasNext())
-		{
-			if(talentDis > P_iterator.next().getFitness())
-			{
-				talentDis=P_iterator.previous().getFitness();
-				talentSpecies=P_iterator.next().deepCopy();
-			}
-		}
-		
-		int talentNum=(int)(population.getPopulation().size()/5);
-		for(int i=1;i<=talentNum;i++)
-		{
-			Individual newSpecies=talentSpecies.deepCopy();
-			population.getPopulation().add(newSpecies);
-	
-		}
-	}
+
 
 }

@@ -36,7 +36,7 @@ public class OnePointMutation implements Mutation {
 				left=right;
 				right=tmp;
 			}
-			System.out.println("left is"+left+ " right is " +right);
+		//	System.out.println("left is"+left+ " right is " +right);
 			while(left < right)
 			{
 				String tmp;
