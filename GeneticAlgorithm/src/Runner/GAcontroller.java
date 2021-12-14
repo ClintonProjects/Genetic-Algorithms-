@@ -90,12 +90,47 @@ public class GAcontroller {
 	}
 	
 	void setSelection(String mode){
-		if(mode.equals("Tournament"))
-			OpratorFactory= FactoryProvider.getFactory("B");
-		    selector=OpratorFactory.getSelection();
+		
+		
+		if(mode.equals("Two Point")) {
+			OpratorFactory= FactoryProvider.getFactory("Two Point");
+		    mutator=OpratorFactory.getMutation();}
+		else if(mode.equals("One Point")) {
+			OpratorFactory= FactoryProvider.getFactory("One  Point");
+	         mutator=OpratorFactory.getMutation();
+		    }
+		else {
+			System.out.println("You input a wrong mode, it shold be Two Point or Two Point");
+		}
+		
+		
+		
 	}
 	
-	
+	void setMutation(String mode){
+		if(mode.equals("Two Point")) {
+			OpratorFactory= FactoryProvider.getFactory("Two Point");
+			crossover=OpratorFactory.getCrossover();}
+		else if(mode.equals("One Point")) {
+			OpratorFactory= FactoryProvider.getFactory("One Point");
+			crossover=OpratorFactory.getCrossover();;
+	 }
+	    else {
+				System.out.println("You input a wrong mode, it shold be Tournament or RouletteWheel");
+			}	
+	}
+	void setCrossover(String mode){
+		if(mode.equals("Two Point")) {
+			OpratorFactory= FactoryProvider.getFactory("Two Point");
+		    selector=OpratorFactory.getSelection();}
+		else if(mode.equals("One Point")) {
+				OpratorFactory= FactoryProvider.getFactory("One Point");
+			selector=OpratorFactory.getSelection();
+			    }
+	    else {
+				System.out.println("You input a wrong mode, it shold be Tournament or RouletteWheel");
+			}	
+	}
 	Individual getBest(Population p)
 	  {
 		float distance=Float.MAX_VALUE;

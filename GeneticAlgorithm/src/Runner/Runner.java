@@ -56,7 +56,10 @@ public class Runner {
 		GAcontroller GA1=new GAcontroller();
 		//get a controller, which can get all of the Algorithm and also this Algorithm can be set
 		
-	//	GA1.setSelection("Tournament");
+		GA1.setSelection("Tournament");
+		GA1.setMutation("Two Point");
+		GA1.setCrossover("Two Point");
+		
 		// we can change the the strategy of selection Algorithm
 		Individual bestRate=GA1.run(p1);
 		System.out.println(" runner best");

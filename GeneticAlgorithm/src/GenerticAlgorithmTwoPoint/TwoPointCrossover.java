@@ -19,7 +19,7 @@ public class TwoPointCrossover implements Crossover {
 		int firstPoint = rand.nextInt(ConfigurationFile_ins.CITY_NUM);
 		System.out.println("firstPoint is :"+firstPoint);
 		newCouple=Cross(newCouple,firstPoint);
-		int secondPoint = rand.nextInt(ConfigurationFile_ins.CITY_NUM-firstPoint+1)+(firstPoint-1);
+		int secondPoint = rand.nextInt(ConfigurationFile_ins.CITY_NUM-firstPoint+1+(firstPoint-1));
 		System.out.println("secondPoint is :"+secondPoint);
 
 		newCouple=Cross(newCouple,secondPoint);

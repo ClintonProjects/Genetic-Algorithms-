@@ -51,8 +51,6 @@ public Individual mutate(Individual individual) {
 			}
 			
 		}
-		
-		
 		return newIndividual;
 	}
 	
