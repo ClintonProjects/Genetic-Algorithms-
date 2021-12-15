@@ -43,7 +43,7 @@ public class TwoPointCrossover implements Crossover {
 				// newCouple.Individual1.genes[fir]=newCouple.Individual2.genes[i]
 				// find the position "sec, "where
 				// newCouple.Individual2.genes[sec]=newCouple.Individual1.genes[i]
-				System.out.println("i is :"+i);
+			//	System.out.println("i is :"+i);
 				int fir, sec;
 				for (fir = 0; !newCouple.Individual1.genes.get(fir).equals(newCouple.Individual2.genes.get(i)); fir++)
 					;

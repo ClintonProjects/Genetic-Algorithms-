@@ -22,13 +22,17 @@ public class Runner {
 		// can be set
 
 		GA1.setSelection("Tournament");
+		//GA1.setMutation("one Point");
+		//GA1.setCrossover("one Point");
+		
+		//GA1.setSelection("RouletteWheel");
 		GA1.setMutation("Two Point");
-		GA1.setCrossover("Two Point");
-
+		GA1.setCrossover("TWo Point");
 		// we can change the the strategy of selection Algorithm
 		Individual bestRate = GA1.run(p1);
-		System.out.println(" runner best");
+		System.out.println("The Best Route Is Below");
 		bestRate.printRate();
+		System.out.println("The Best Individual of the every generation show below: ");
 		GA1.PrintFitness(GA1.generationBestFitness);
 
 		// get best Individual

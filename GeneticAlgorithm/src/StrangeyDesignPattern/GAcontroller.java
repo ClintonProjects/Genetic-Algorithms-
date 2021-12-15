@@ -53,8 +53,9 @@ public class GAcontroller  {
 		int DEVELOP_NUM=ConfigurationFile.getInstance().DEVELOP_NUM;
 		
 		while( DEVELOP_NUM > 0){
+		if (selector.getClass().getSimpleName().equals("TourmentSelection"))
 			elistic(population);
-		System.out.println(population.getPopulation().size());
+		//System.out.println(population.getPopulation().size());
     	Couple  parent = doSelection(population);
  
     	Couple  child =crossover.doCross(parent);
@@ -91,8 +92,7 @@ public class GAcontroller  {
 		Replacer.doRelace(couple, p);
 	}
 	
-	public void setSelection(String mode){
-		
+	public void setMutation(String mode){
 		
 		if(mode.equals("Two Point")) {
 			OpratorFactory= FactoryProvider.getFactory("Two Point");
@@ -101,37 +101,32 @@ public class GAcontroller  {
 			OpratorFactory= FactoryProvider.getFactory("One  Point");
 	         mutator=OpratorFactory.getMutation();
 		    }
-		else {
-			System.out.println("You input a wrong mode, it shold be Two Point or Two Point");
-		}
-		
-		
-		
+
+		System.out.println("The current Mutation is "+mutator.getClass().getSimpleName());
 	}
 	
-	public void setMutation(String mode){
+	public void setCrossover(String mode){
 		if(mode.equals("Two Point")) {
 			OpratorFactory= FactoryProvider.getFactory("Two Point");
 			crossover=OpratorFactory.getCrossover();}
 		else if(mode.equals("One Point")) {
 			OpratorFactory= FactoryProvider.getFactory("One Point");
 			crossover=OpratorFactory.getCrossover();;
-	 }
-	    else {
-				System.out.println("You input a wrong mode, it shold be Tournament or RouletteWheel");
-			}	
+	    }
+		System.out.println("The current Crossover is "+crossover.getClass().getSimpleName());
+	
 	}
-	public void setCrossover(String mode){
-		if(mode.equals("Two Point")) {
+	public void setSelection(String mode){
+		if(mode.equals("Tournament")) {
 			OpratorFactory= FactoryProvider.getFactory("Two Point");
 		    selector=OpratorFactory.getSelection();}
-		else if(mode.equals("One Point")) {
+		else if(mode.equals("RouletteWheel")) {
 				OpratorFactory= FactoryProvider.getFactory("One Point");
 			selector=OpratorFactory.getSelection();
 			    }
-	    else {
-				System.out.println("You input a wrong mode, it shold be Tournament or RouletteWheel");
-			}	
+	    
+		System.out.println("The current selection is "+selector.getClass().getSimpleName());
+				
 	}
 
 	 public void PrintFitness(ArrayList p) {
