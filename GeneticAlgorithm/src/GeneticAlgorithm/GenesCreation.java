@@ -11,9 +11,22 @@ import java.util.ArrayList;
 
 
 public interface GenesCreation<T> {
-	//This is parent generic class for genes, as genes could be of multiple types of veribles,
-	//as an id for a var 
+	/**
+	 * get the genes 
+	 * 
+	 * @param 
+	 * @return T
+	 * @see
+	 */
 	ArrayList<T> getGenes();
+	
+	/**
+	 * Create the gense by random
+	 * 
+	 * @param 
+	 * @return T
+	 * @see
+	 */
 	ArrayList<T> createByRandomGenes();
 
 }

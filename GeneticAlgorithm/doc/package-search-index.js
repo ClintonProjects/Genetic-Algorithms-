@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"GeneticAlgorithm"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"GaAbstractFactory"},{"l":"GeneticAlgorithm"},{"l":"Runner"},{"l":"Singleton"},{"l":"StrangeyDesignPattern"}];updateSearchResults();

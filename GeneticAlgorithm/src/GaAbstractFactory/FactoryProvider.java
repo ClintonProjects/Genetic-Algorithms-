@@ -7,7 +7,12 @@ package GaAbstractFactory;
 
 public class FactoryProvider {
  
-	//Factory provider for the abstract factory method.
+	/**
+	* Factory provider for the abstract factory method.
+	* @param 
+	* @return String choice
+	* @see   
+	*/	
 	public static AbstractFactory getFactory(String choice) {
 
 		if (choice.equalsIgnoreCase("Two Point")) {

@@ -18,7 +18,6 @@ import java.util.Random;
 import Singleton.ConfigurationFile;
 
 public class Individual  implements Serializable{
-	// ConfigurationFile;
 
 	public ArrayList<String> genes = new ArrayList<String>();
 

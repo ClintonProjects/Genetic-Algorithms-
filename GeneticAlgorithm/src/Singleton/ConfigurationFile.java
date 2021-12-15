@@ -1,11 +1,11 @@
 package Singleton;
 
 //Class Name: Couple
+
 //Description:
 //This file is mainly used for configurating the static (as in always the same no static in java terms)
 //items throughout are project that will always be the same, sort of like the settings
 //Authors(s): Clinton, Wang
-
 
 public class ConfigurationFile {
 
@@ -37,16 +37,22 @@ public class ConfigurationFile {
 			}
 		}
 	}
-	
-//	A singleton is a design pattern that is restricted to be initialized once, this means it can only be one of these objects in the runtime environment.
-//	This is mainly used for items such as databases or items which can only be called one.
-//	In our example below we used double-check locking for configuration as we only need one instance of it.
-//	This is because we use synchronized which will only one thread to be run and wait on till this thread task is done before handling another task from this method.
-	
-	
+
 	private static volatile ConfigurationFile instance;
 
-	//Double locking singleton to prevent thread issues.
+	/**
+	 * A singleton is a design pattern that is restricted to be initialized once,
+	 * this means it can only be one of these objects in the runtime environment.
+	 * This is mainly used for items such as databases or items which can only be
+	 * called one. In our example below we used double-check locking for
+	 * configuration as we only need one instance of it. This is because we use
+	 * synchronized which will only one thread to be run and wait on till this
+	 * thread task is done before handling another task from this method.
+	 * 
+	 * @param
+	 * @return T
+	 * @see
+	 */
 	public static ConfigurationFile getInstance() {
 		if (instance == null) {
 			synchronized (ConfigurationFile.class) {
