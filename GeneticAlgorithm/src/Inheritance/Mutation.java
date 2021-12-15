@@ -1,10 +1,8 @@
-package StrategyPattern;
+package Inheritance;
 
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 
 public interface Mutation {
-	
-	Couple mutate(Couple couple );
-
+	Couple mutate(Couple couple);
 }

@@ -1,4 +1,4 @@
-package Runner;
+package StrangeyDesignPattern;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
@@ -9,9 +9,9 @@ import GeneticAlgorithm.FitnessEvaluator;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 import GeneticAlgorithm.Replace;
+import Inheritance.*;
 import Singleton.ConfigurationFile;
 import Singleton.ConfigurationFileSingleton;
-import StrategyPattern.*;
 
 
 public class GAcontroller {
@@ -46,7 +46,7 @@ public class GAcontroller {
 		selector= OpratorFactory.getSelection();
 		
 	}
-	Individual run(Population population)
+	public Individual run(Population population)
 	{
 		int DEVELOP_NUM=ConfigurationFile_ins.DEVELOP_NUM;
 		
@@ -89,7 +89,7 @@ public class GAcontroller {
 		Replacer.doRelace(couple, p);
 	}
 	
-	void setSelection(String mode){
+	public void setSelection(String mode){
 		
 		
 		if(mode.equals("Two Point")) {
@@ -107,7 +107,7 @@ public class GAcontroller {
 		
 	}
 	
-	void setMutation(String mode){
+	public void setMutation(String mode){
 		if(mode.equals("Two Point")) {
 			OpratorFactory= FactoryProvider.getFactory("Two Point");
 			crossover=OpratorFactory.getCrossover();}
@@ -119,7 +119,7 @@ public class GAcontroller {
 				System.out.println("You input a wrong mode, it shold be Tournament or RouletteWheel");
 			}	
 	}
-	void setCrossover(String mode){
+	public void setCrossover(String mode){
 		if(mode.equals("Two Point")) {
 			OpratorFactory= FactoryProvider.getFactory("Two Point");
 		    selector=OpratorFactory.getSelection();}
@@ -149,7 +149,7 @@ public class GAcontroller {
 		return bestSpecies;
 	  }
 	
-	 void PrintFitness(ArrayList p) {
+	 public void PrintFitness(ArrayList p) {
 		 ListIterator<Float> P_iterator =p.listIterator();
 
 			while(P_iterator.hasNext())

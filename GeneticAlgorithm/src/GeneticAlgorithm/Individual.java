@@ -23,7 +23,7 @@ public class Individual  implements Serializable{
 	private float fitness;
 
 	public Individual() {
-		GenesCreation GC = new GenesB();
+		GenesCreation<String> GC = new GenesB();
 		genes = GC.createByRandomGenes();
 		this.fitness = updateFitness();
 		// System.out.println(this.fitness); only for test

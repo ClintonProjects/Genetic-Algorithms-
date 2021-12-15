@@ -7,7 +7,7 @@ import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.FitnessEvaluator;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
-import StrategyPattern.Selection;
+import Inheritance.Selection;
 
 
 public class RouletteWheelSelection implements  Selection {

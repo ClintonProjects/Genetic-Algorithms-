@@ -3,12 +3,12 @@ package Singleton;
 public class ConfigurationFile {
 
 	public final int SPECIES_NUM = 100;
-	public final int DEVELOP_NUM = 1000;//1000
-	//public final float pcl = 0.6f;
+	public final int DEVELOP_NUM = 1000;// 1000
+	// public final float pcl = 0.6f;
 	public final float pcl = 0.0f;
 
 	public final float pch = 0.95f;
-	//public final float pm = 0.4f;
+	// public final float pm = 0.4f;
 	public final float pm = 0.99f;
 
 	int[][] cityPosition = { { 60, 200 }, { 180, 200 }, { 80, 180 }, { 140, 180 }, { 20, 160 }, { 100, 160 }, { 200, 160 }, { 140, 140 }, { 40, 120 },

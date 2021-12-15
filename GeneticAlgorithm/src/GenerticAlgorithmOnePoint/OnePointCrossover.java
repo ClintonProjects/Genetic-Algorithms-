@@ -3,9 +3,9 @@ package GenerticAlgorithmOnePoint;
 import java.util.Random;
 
 import GeneticAlgorithm.Couple;
+import Inheritance.Crossover;
 import Singleton.ConfigurationFile;
 import Singleton.ConfigurationFileSingleton;
-import StrategyPattern.Crossover;
 
 public class OnePointCrossover implements Crossover {
 

@@ -1,12 +1,8 @@
-package StrategyPattern;
+package Inheritance;
 
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.*;
 
 public interface Replacer {
-	//
-  void doRelace(Couple couple, Population p);
-  
-  
-  
+	void doRelace(Couple couple, Population p);
 }

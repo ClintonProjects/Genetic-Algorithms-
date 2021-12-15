@@ -5,9 +5,9 @@ import GenerticAlgorithmOnePoint.RouletteWheelSelection;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
-import StrategyPattern.Crossover;
-import StrategyPattern.Mutation;
-import StrategyPattern.Selection;
+import Inheritance.Crossover;
+import Inheritance.Mutation;
+import Inheritance.Selection;
 
 public class GeneticAlgorithmFactoryTwoPoint implements AbstractFactory {
 

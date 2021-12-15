@@ -3,8 +3,8 @@ package Genes;
 import java.util.ArrayList;
 
 public interface GenesCreation<T> {
-
-	T getGenes();
-	ArrayList<?> createByRandomGenes();
+	//This is parent generic class for genes, as genes could be of multiple types of veribles 
+	ArrayList<T> getGenes();
+	ArrayList<T> createByRandomGenes();
 
 }

@@ -8,6 +8,10 @@ import Singleton.ConfigurationFileSingleton;
 
 public class Population {
 	
+	/*
+	 * This class is for the populations.
+	 */
+	
 	int speciesNum = ConfigurationFileSingleton.getInstance().SPECIES_NUM;
 	ArrayList<Individual> population = new ArrayList<Individual>();
 

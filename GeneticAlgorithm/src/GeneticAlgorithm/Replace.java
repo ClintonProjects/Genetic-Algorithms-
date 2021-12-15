@@ -1,7 +1,7 @@
 package GeneticAlgorithm;
 import java.util.ListIterator;
 
-import StrategyPattern.*;
+import Inheritance.*;
 
 
 public class Replace implements Replacer{

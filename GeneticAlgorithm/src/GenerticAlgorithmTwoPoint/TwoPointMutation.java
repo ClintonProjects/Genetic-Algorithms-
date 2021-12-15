@@ -4,9 +4,9 @@ import java.util.Random;
 
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
+import Inheritance.Mutation;
 import Singleton.ConfigurationFile;
 import Singleton.ConfigurationFileSingleton;
-import StrategyPattern.Mutation;
 
 public class TwoPointMutation implements  Mutation {
 

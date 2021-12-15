@@ -1,9 +1,7 @@
-/Genes/
-/GenerticAlgorithmA/
-/GenerticAlgorithmOnePoint/
-/GeneticAlgorithm/
-/Singleton/
+/StrangeyDesignPattern/
 /Runner/
-/StrategyPattern/
-/AbstractFactory/
+/Singleton/
+/Inheritance/
+/GeneticAlgorithm/
+/Genes/
 /GenerticAlgorithmTwoPoint/

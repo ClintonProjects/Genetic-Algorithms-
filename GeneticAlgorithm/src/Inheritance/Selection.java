@@ -1,4 +1,4 @@
-package StrategyPattern;
+package Inheritance;
 
 import java.util.ArrayList;
 

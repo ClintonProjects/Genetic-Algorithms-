@@ -5,12 +5,12 @@ import java.util.Random;
 
 import Singleton.ConfigurationFileSingleton;
 
-public class GenesB implements GenesCreation {
+public class GenesB implements GenesCreation<String> {
 
 	public ArrayList<String> genes = new ArrayList<String>();
 
 	@Override
-	public ArrayList<?> createByRandomGenes() {
+	public ArrayList<String> createByRandomGenes() {
 		for (int i = 0; i < ConfigurationFileSingleton.getInstance().CITY_NUM; i++)
 			genes.add(String.valueOf(i));
 
@@ -27,7 +27,7 @@ public class GenesB implements GenesCreation {
 	}
 
 	@Override
-	public ArrayList<?> getGenes() {
+	public ArrayList<String> getGenes() {
 		return genes;
 	}
 

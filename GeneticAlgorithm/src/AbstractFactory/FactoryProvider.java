@@ -7,6 +7,7 @@ import GenerticAlgorithmTwoPoint.GeneticAlgorithmFactoryTwoPoint;
 
 public class FactoryProvider {
  
+	//Factory provider for the abstract factory method.
 	
 	public static AbstractFactory getFactory(String choice) {
 

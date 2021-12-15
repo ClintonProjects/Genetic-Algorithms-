@@ -2,12 +2,15 @@ package GenerticAlgorithmOnePoint;
 
 import AbstractFactory.AbstractFactory;
 import GenerticAlgorithmTwoPoint.TourmentSelection;
-import StrategyPattern.Crossover;
-import StrategyPattern.Mutation;
-import StrategyPattern.Selection;
+import Inheritance.Crossover;
+import Inheritance.Mutation;
+import Inheritance.Selection;
 
 public class GeneticAlgorithmFactoryOnePoint implements AbstractFactory {
 
+	
+	// 
+	
 	@Override
 	public Crossover getCrossover() {
 		// TODO Auto-generated method stub

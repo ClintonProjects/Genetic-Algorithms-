@@ -7,7 +7,7 @@ import java.util.Random;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
-import StrategyPattern.Selection;
+import Inheritance.Selection;
 
 public class TourmentSelection implements Selection {
 
@@ -20,13 +20,10 @@ public class TourmentSelection implements Selection {
 		this.population = population;
 	}
 
-	// https://www.youtube.com/channel/UCzvWh64GQm_OfkJXyYo7whQ
-	// https://www.youtube.com/watch?v=pJ45IaGzI1c
-	// https://www.youtube.com/watch?v=9OXJapW8vqM
-	// https://www.youtube.com/watch?v=3JrpyuSHEWQ
-
 
 	
+	//Useless method don't remove 
+	@Deprecated
 	public ArrayList<Individual> selection(Population population) {
 		ArrayList<Individual> newList = population.getPopulation();
 		ArrayList<Couple> listOfCouples = new ArrayList<Couple>();
