@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-/*Class Name: Couple
-//Description:
-//The genes of the Individual is a combination of cities，which shows a sequence of city of  the route. 
-//Authors(s): Clinton, Wang
-*/
+/**
+ * Individual is a single member of our population. so in are case it's a city,
+ * A city is constructed with genes and fitness, fitness being it's distance from the point.
+ * genes being random string which are used to identify a single city in are example.
+ */
 import Singleton.ConfigurationFile;
 
 public class Individual  implements Serializable{
@@ -23,6 +23,14 @@ public class Individual  implements Serializable{
 
 	private float fitness;
 
+	
+	/**
+	* Individual no-args constructor
+	* @param 
+	* @param  
+	* @return   
+	* @see   
+	*/
 	public Individual() {
 		GenesCreation<String> GC = new GenesB();
 		genes = GC.createByRandomGenes();
@@ -31,7 +39,13 @@ public class Individual  implements Serializable{
 	}
 
 	
-
+	/**
+	* sets a fitness to each Indivual in are population 
+	* @param 
+	* @param  
+	* @return   
+	* @see   
+	*/
 	float updateFitness() {
 		float totalDis = 0.0f;
 		for (int i = 0; i < ConfigurationFile.getInstance().CITY_NUM; i++) {
@@ -44,6 +58,14 @@ public class Individual  implements Serializable{
 		return this.fitness;
 	}
 
+	
+	/**
+	* Print route, and current distance.
+	* @param 
+	* @param  
+	* @return   
+	* @see   
+	*/
 	public void printRate() {
 		System.out.print("the route ：");
 		for (int i = 0; i < genes.size(); i++)
@@ -70,6 +92,14 @@ public class Individual  implements Serializable{
 		this.fitness=dis;
 	}
 
+	/**
+	* Copies the Individual Object
+	* 
+	* @param 
+	* @param  
+	* @return Individual
+	* @see   
+	*/
 	public Individual deepCopy(){                    
 		Individual dest = new Individual();      
 		dest.fitness=this.fitness;
