@@ -13,13 +13,16 @@ import GeneticAlgorithm.Population;
 import GeneticAlgorithm.Replace;
 import Singleton.ConfigurationFile;
 
-//Class Name: GAcontroller
-//Description: The controller of the GA 
-//Authors(s): Clinton, Wang
+/**
+* returns an interface for crossover
+* @param 
+* @param  
+* @return   
+* @see   
+*/
 
 public class GAcontroller {
 
-	// here is some reference for stratgy design pattern
 	Mode mode;
 	AbstractFactory OpratorFactory;
 
@@ -30,8 +33,6 @@ public class GAcontroller {
 	Individual bestIndividualOfAll = new Individual();
 
 	public ArrayList<Float> generationBestFitness = new ArrayList<Float>();
-
-	
 
 	public GAcontroller(Mode mode) {
 		this.mode = mode;
@@ -51,13 +52,7 @@ public class GAcontroller {
 		selector = OpratorFactory.getSelection();
 
 	}
-	/**
-	* The method return the best individual of all generations after the development
-	* @param Population population
-	* @param
-	* @return Individual
-	* @see
-	*/
+
 	public Individual run(Population population) {
 		int DEVELOP_NUM = ConfigurationFile.getInstance().DEVELOP_NUM;
 
