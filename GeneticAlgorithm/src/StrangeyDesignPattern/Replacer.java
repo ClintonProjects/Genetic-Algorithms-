@@ -3,10 +3,11 @@ package StrangeyDesignPattern;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.*;
 
-//Class Name: Couple
+//Class Name: Replacer
 //Description:
-//This is for the abstract factory.
+//This is the interface associated with the StatngeyDesignPattern
 //Authors(s): Clinton, Wang
+
 
 public interface Replacer {
 	void doRelace(Couple couple, Population p);

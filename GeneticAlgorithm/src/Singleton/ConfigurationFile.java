@@ -1,5 +1,12 @@
 package Singleton;
 
+//Class Name: Couple
+//Description:
+//This file is mainly used for configurating the static (as in always the same no static in java terms)
+//items throughout are project that will always be the same, sort of like the settings
+//Authors(s): Clinton, Wang
+
+
 public class ConfigurationFile {
 
 	public final int SPECIES_NUM = 100;
@@ -19,7 +26,6 @@ public class ConfigurationFile {
 	public float[][] disMap = new float[CITY_NUM][CITY_NUM];
 
 	public ConfigurationFile() {
-
 		// canculate the distance between every two city , get a CITY_NUM*CITY_NUM table
 		for (int i = 0; i < CITY_NUM; i++) {
 			for (int j = i; j < CITY_NUM; j++) { // sqrt of (x1-x2)^2+(y1-y2)^2
@@ -31,6 +37,13 @@ public class ConfigurationFile {
 			}
 		}
 	}
+	
+//	A singleton is a design pattern that is restricted to be initialized once, this means it can only be one of these objects in the runtime environment.
+//	This is mainly used for items such as databases or items which can only be called one.
+//	In our example below we used double-check locking for configuration as we only need one instance of it.
+//	This is because we use synchronized which will only one thread to be run and wait on till this thread task is done before handling another task from this method.
+	
+	
 	private static volatile ConfigurationFile instance;
 
 	//Double locking singleton to prevent thread issues.
