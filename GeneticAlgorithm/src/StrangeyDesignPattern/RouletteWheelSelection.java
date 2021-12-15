@@ -8,8 +8,8 @@ import GeneticAlgorithm.FitnessEvaluator;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 
-//Class Name: Couple
-//Description:
+//Class Name: RouletteWheelSelection
+//Description:RouletteWheel Selection
 //This is for the abstract factory.
 //Authors(s): Clinton, Wang
 

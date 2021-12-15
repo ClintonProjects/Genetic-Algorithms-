@@ -6,8 +6,8 @@ import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import Singleton.ConfigurationFile;
 
-//Class Name: Couple
-//Description:
+//Class Name: OnePointMutation
+//Description: One Point Mutation
 //
 //Authors(s): Clinton, Wang
 

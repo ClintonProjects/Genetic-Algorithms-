@@ -7,8 +7,8 @@ import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 
-//Class Name: Couple
-//Description:
+//Class Name: TourmentSelection
+//Description:Tournament Selection
 //This is for the abstract factory.
 //Authors(s): Clinton, Wang
 

@@ -6,9 +6,8 @@ import java.util.Random;
 import GeneticAlgorithm.Couple;
 import Singleton.ConfigurationFile;
 
-//Class Name: Couple
-//Description:
-//This is for the abstract factory.
+//Class Name: TwoPointCrossover
+//Description:Two Point Crossover
 //Authors(s): Clinton, Wang
 
 public class TwoPointCrossover implements Crossover {

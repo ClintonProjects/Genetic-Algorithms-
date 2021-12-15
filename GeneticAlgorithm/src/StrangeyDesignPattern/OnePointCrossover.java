@@ -5,8 +5,8 @@ import java.util.Random;
 import GeneticAlgorithm.Couple;
 import Singleton.ConfigurationFile;
 
-//Class Name: Couple
-//Description:
+//Class Name: OnePointCrossover
+//Description:One Point Crossover
 //
 //Authors(s): Clinton, Wang
 
