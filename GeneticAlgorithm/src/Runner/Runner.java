@@ -34,5 +34,9 @@ public class Runner {
 		// get best Individual
 
 		bestRate.printRate();
+		
+	
+		
+		
 	}
 }

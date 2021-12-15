@@ -4,9 +4,9 @@ import GaAbstractFactory.FactoryProvider;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 
-//Class Name: Couple
+//Class Name: Crossover
 //Description:
-//This is for the abstract factory.
+//This is the interface associated with the StatngeyDesignPattern
 //Authors(s): Clinton, Wang
 
 public interface Crossover {

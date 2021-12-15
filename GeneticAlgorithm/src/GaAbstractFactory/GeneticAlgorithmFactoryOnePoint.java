@@ -16,6 +16,13 @@ import StrangeyDesignPattern.Selection;
 public class GeneticAlgorithmFactoryOnePoint implements AbstractFactory {
 
 	@Override
+	/**
+	* returns an interface for crossover
+	* @param 
+	* @param  
+	* @return   
+	* @see   
+	*/
 	public Crossover getCrossover() {
 		// TODO Auto-generated method stub
 		return new OnePointCrossover();

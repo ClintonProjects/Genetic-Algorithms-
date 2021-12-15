@@ -19,9 +19,15 @@ public class FitnessEvaluator {
 	public FitnessEvaluator() {
 		
 	}
-	/*Update the fitness of an Individual 
-	 *it will add a distance between two cities to get a sum, the sum will be the fitness 
-	 */
+
+	/**
+	* Update the fitness of an Individual 
+	* it will add a distance between two cities to get a sum, the sum will be the fitness 
+	* @param 
+	* @param Individual individual
+	* @return void
+	* @see   
+	*/	
 	public void updateFitness(Individual individual) {
 		float totalDis = 0.0f;
 		for (int i = 0; i < ConfigurationFile.getInstance().CITY_NUM; i++) {
@@ -34,11 +40,25 @@ public class FitnessEvaluator {
 	}
 	
 	//Update the fitness for a Couple 
+	
+	
+	/**
+	* Update the fitness for a Couple 
+	* @param Couple couple
+	* @return void
+	* @see   
+	*/	
 	public void updateFitness(Couple couple) {
 		updateFitness(couple.Individual1);
 		updateFitness(couple.Individual2);
 	}
-	//Update the fitness for a Population
+
+	/**
+	* Update the fitness for a Population
+	* @param Population population
+	* @return void
+	* @see   
+	*/	
 	public void updateFitness(Population population) {
 		ListIterator<Individual> P_iterator =population.getPopulation().listIterator();
 		while(P_iterator.hasNext()) {
@@ -48,7 +68,13 @@ public class FitnessEvaluator {
 	}
 	
 	
-	// get individual which has biggest fitness from a population
+
+	/**
+	* get individual which has biggest fitness from a population
+	* @param Population p
+	* @return void
+	* @see   
+	*/	
 	public Individual getWeakest(Population p)
 	  {
 		float distance=0;
