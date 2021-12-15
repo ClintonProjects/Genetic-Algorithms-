@@ -1,5 +1,5 @@
 package GeneticAlgorithm;
 
 public enum Mode {
-	TwoPoint, OnePoint, Tourment, Roulette
+	TwoPoint, OnePoint, Tournament, Roulette
 }

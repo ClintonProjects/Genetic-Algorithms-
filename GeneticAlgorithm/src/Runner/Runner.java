@@ -1,6 +1,7 @@
 package Runner;
 
 import GeneticAlgorithm.Individual;
+import GeneticAlgorithm.Mode;
 import GeneticAlgorithm.Population;
 import StrangeyDesignPattern.GAcontroller;
 
@@ -21,13 +22,13 @@ public class Runner {
 		// get a controller, which can get all of the Algorithm and also this Algorithm
 		// can be set
 
-		GA1.setSelection("Tournament");
+		GA1.setSelection(Mode.Tournament);
 		//GA1.setMutation("one Point");
 		//GA1.setCrossover("one Point");
 		
 		//GA1.setSelection("RouletteWheel");
-		GA1.setMutation("Two Point");
-		GA1.setCrossover("TWo Point");
+		GA1.setMutation(Mode.TwoPoint);
+		GA1.setCrossover(Mode.TwoPoint);
 		// we can change the the strategy of selection Algorithm
 		Individual bestRate = GA1.run(p1);
 		System.out.println("The Best Route Is Below");
