@@ -95,7 +95,9 @@ public class FitnessEvaluator {
 		//PrintFitness(p);
 		return bestSpecies;
 	  }
+	
 	// get individual which has shortest fitness from a population
+	
 	public Individual getBest(Population p)
 	  {
 		float distance=Float.MAX_VALUE;

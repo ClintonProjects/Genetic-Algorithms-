@@ -18,10 +18,10 @@ public class TwoPointCrossover implements Crossover {
 		Random rand = new Random();
 		Couple newCouple= couple.deepCopy();
 		int firstPoint = rand.nextInt(ConfigurationFile.getInstance().CITY_NUM);
-		System.out.println("firstPoint is :"+firstPoint);
+		//System.out.println("firstPoint is :"+firstPoint);
 		newCouple=Cross(newCouple,firstPoint);
 		int secondPoint = rand.nextInt(ConfigurationFile.getInstance().CITY_NUM-firstPoint+1+(firstPoint-1));
-		System.out.println("secondPoint is :"+secondPoint);
+	//	System.out.println("secondPoint is :"+secondPoint);
 
 		newCouple=Cross(newCouple,secondPoint);
 		return newCouple;
@@ -36,7 +36,7 @@ public class TwoPointCrossover implements Crossover {
 		
 		if (rate > ConfigurationFile.getInstance().pcl && rate < ConfigurationFile.getInstance().pch) {
 		
-			System.out.println("begin cross");
+		//	System.out.println("begin cross");
 			
 			for (int i = index; i < ConfigurationFile.getInstance().CITY_NUM; i++) {
 				// find the position "fir, "where
