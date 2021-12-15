@@ -8,7 +8,7 @@ import StrangeyDesignPattern.RouletteWheelSelection;
 import StrangeyDesignPattern.Selection;
 
 //Class Name: Couple
-//Description:
+//Description: 
 //This is for the abstract factory.
 //Authors(s): Clinton, Wang
 

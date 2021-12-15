@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-//Class Name: Couple
+/*Class Name: Couple
 //Description:
-//This is single item in are population, as in a specific city
+//The genes of the Individual is a combination of cities，which shows a sequence of city of  the route. 
 //Authors(s): Clinton, Wang
-
+*/
 import Singleton.ConfigurationFile;
 
 public class Individual  implements Serializable{
@@ -70,16 +70,6 @@ public class Individual  implements Serializable{
 		this.fitness=dis;
 	}
 
-//deepCopy
-//public Individual deepCopy()throws IOException, ClassNotFoundException{           
-//		ByteArrayOutputStream byteOut = new ByteArrayOutputStream();           
-//		ObjectOutputStream out = new ObjectOutputStream(byteOut);           
-//		out.writeObject(this);                  
-//		ByteArrayInputStream byteIn = new ByteArrayInputStream(byteOut.toByteArray());           
-//		ObjectInputStream in =new ObjectInputStream(byteIn);           
-//		Individual dest = (Individual)in.readObject();           
-//		return dest;       
-//	} 
 	public Individual deepCopy(){                    
 		Individual dest = new Individual();      
 		dest.fitness=this.fitness;
@@ -90,9 +80,6 @@ public class Individual  implements Serializable{
 		return dest;       	
 	}
 
-	public Object getPopulation() {
-		// TODO Auto-generated method stub
-		return null;
-	} 
+
    
 }

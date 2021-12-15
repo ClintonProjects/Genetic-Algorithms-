@@ -7,7 +7,7 @@ import StrangeyDesignPattern.GAcontroller;
 
 //Class Name: Couple
 //Description:
-//This is for the abstract factory.
+//
 //Authors(s): Clinton, Wang
 
 
