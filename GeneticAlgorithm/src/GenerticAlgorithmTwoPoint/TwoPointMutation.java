@@ -1,4 +1,4 @@
-package GenerticAlgorithmA;
+package GenerticAlgorithmTwoPoint;
 
 import java.util.Random;
 
@@ -51,8 +51,6 @@ public Individual mutate(Individual individual) {
 			}
 			
 		}
-		
-		
 		return newIndividual;
 	}
 	

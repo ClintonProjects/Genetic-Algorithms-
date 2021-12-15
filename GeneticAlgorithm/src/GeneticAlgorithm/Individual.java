@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+import Genes.GenesB;
+import Genes.GenesCreation;
 import Singleton.ConfigurationFile;
 import Singleton.ConfigurationFileSingleton;
 
@@ -21,25 +23,13 @@ public class Individual  implements Serializable{
 	private float fitness;
 
 	public Individual() {
-		createByRandomGenes();
+		GenesCreation GC = new GenesB();
+		genes = GC.createByRandomGenes();
 		this.fitness = updateFitness();
 		// System.out.println(this.fitness); only for test
 	}
 
-	void createByRandomGenes() {
-		for (int i = 0; i < ConfigurationFile_ins.CITY_NUM; i++) 
-			genes.add(String.valueOf(i));
-
-		ArrayList<String> result = new ArrayList<String>();
-		for (int j = 0; j < ConfigurationFile_ins.CITY_NUM; j++) {
-			int num = Math.abs(new Random().nextInt(genes.size()));
-			result.add(genes.get(num));
-			genes.remove(num);
-		}
-		
-		genes.clear();
-		genes.addAll(result);
-	}
+	
 
 	float updateFitness() {
 		float totalDis = 0.0f;
@@ -96,9 +86,7 @@ public class Individual  implements Serializable{
 		for(String code:this.genes ){	
 			dest.genes.add(code);
 		}
-		return dest;       
-		
-		
+		return dest;       	
 	}
 
 	public Object getPopulation() {

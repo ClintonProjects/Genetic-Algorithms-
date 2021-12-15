@@ -1,7 +1,7 @@
 package GenerticAlgorithmOnePoint;
 
 import AbstractFactory.AbstractFactory;
-import GenerticAlgorithmA.TourmentSelection;
+import GenerticAlgorithmTwoPoint.TourmentSelection;
 import StrategyPattern.Crossover;
 import StrategyPattern.Mutation;
 import StrategyPattern.Selection;
@@ -23,9 +23,8 @@ public class GeneticAlgorithmFactoryOnePoint implements AbstractFactory {
 	@Override
 	public Selection getSelection() {
 		// TODO Auto-generated method stub
-		return new TourmentSelection();
+		return new RouletteWheelSelection();
 	}
-
 
 
 }

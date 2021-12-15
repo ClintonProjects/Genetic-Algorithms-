@@ -1,7 +1,10 @@
 package Genes;
 
-interface GenesCreation<T> {
+import java.util.ArrayList;
 
-	public T Genes();
-	
+public interface GenesCreation<T> {
+
+	T getGenes();
+	ArrayList<?> createByRandomGenes();
+
 }

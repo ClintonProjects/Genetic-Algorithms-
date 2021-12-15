@@ -4,15 +4,14 @@ import java.io.IOException;
 
 import AbstractFactory.AbstractFactory;
 import AbstractFactory.FactoryProvider;
-import GenerticAlgorithmA.TourmentSelection;
-import GenerticAlgorithmA.TwoPointCrossover;
 import GenerticAlgorithmOnePoint.OnePointCrossover;
 import GenerticAlgorithmOnePoint.OnePointMutation;
+import GenerticAlgorithmTwoPoint.TourmentSelection;
+import GenerticAlgorithmTwoPoint.TwoPointCrossover;
 import GeneticAlgorithm.*;
 import GeneticAlgorithm.Individual;
 //import Re_constr.onePointCrossover;
 import GeneticAlgorithm.Population;
-import Singleton.ConfigurationFile;
 import StrategyPattern.*;
 
 public class test {

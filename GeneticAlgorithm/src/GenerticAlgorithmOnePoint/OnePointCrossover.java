@@ -18,14 +18,14 @@ public class OnePointCrossover implements Crossover {
 		
 		Couple newCouple= couple.deepCopy();
 		
-		System.out.println("perpare cross");
+		//System.out.println("perpare cross");
 		
 		if (rate > ConfigurationFile_ins.pcl && rate < ConfigurationFile_ins.pch) {
 			
 			int begin = rand.nextInt(ConfigurationFile_ins.CITY_NUM);
 			
-			System.out.println("begin cross");
-			System.out.println("firstPoint is :"+begin);
+			//System.out.println("begin cross");
+		//	System.out.println("firstPoint is :"+begin);
 			for (int i = begin; i < ConfigurationFile_ins.CITY_NUM; i++) {
 				// find the position "fir, "where
 				// newCouple.Individual1.genes[fir]=newCouple.Individual2.genes[i]
