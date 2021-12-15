@@ -59,7 +59,7 @@ public class GAcontroller  {
     	
     	doReplace(child,population);
     	
-    	Individual bestIndiviOfNew=getBest(population);
+    	Individual bestIndiviOfNew= new FitnessEvaluator().getBest(population);
     	
     	
     	//bestIndiviOfNew.printRate();
@@ -129,24 +129,7 @@ public class GAcontroller  {
 				System.out.println("You input a wrong mode, it shold be Tournament or RouletteWheel");
 			}	
 	}
-	Individual getBest(Population p)
-	  {
-		float distance=Float.MAX_VALUE;
-		Individual bestSpecies=null;
-		ListIterator<Individual> P_iterator =p.getPopulation().listIterator();
-		//System.out.println(" new fitness is"+ P_iterator.next().getFitness());
-		while(P_iterator.hasNext())
-		{
-			if(P_iterator.next().getFitness()<distance)
-			{
-				bestSpecies=P_iterator.previous();
-			//	System.out.println(" new fitness is"+ P_iterator.next().getFitness());
-				distance=P_iterator.next().getFitness();		
-			}
-		}
-		return bestSpecies;
-	  }
-	
+
 	 public void PrintFitness(ArrayList p) {
 		 ListIterator<Float> P_iterator =p.listIterator();
 

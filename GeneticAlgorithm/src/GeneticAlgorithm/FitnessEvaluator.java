@@ -7,6 +7,10 @@ import Singleton.ConfigurationFile;
 public class FitnessEvaluator {
 
 	
+	public FitnessEvaluator() {
+		
+	}
+	
 	public void updateFitness(Individual individual) {
 		float totalDis = 0.0f;
 		for (int i = 0; i < ConfigurationFile.getInstance().CITY_NUM; i++) {
@@ -72,6 +76,8 @@ public class FitnessEvaluator {
 		}
 		return bestSpecies;
 	  }
+	
+	
 	
 	
 	

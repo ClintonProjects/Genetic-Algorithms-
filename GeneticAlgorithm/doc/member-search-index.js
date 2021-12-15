@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"Inheritance","c":"Selection","l":"select(Population)","u":"select(GeneticAlgorithm.Population)"}];updateSearchResults();
+memberSearchIndex = [{"p":"GeneticAlgorithm","c":"Replace","l":"doRelace(Couple, Population)","u":"doRelace(GeneticAlgorithm.Couple,GeneticAlgorithm.Population)"},{"p":"GeneticAlgorithm","c":"Replace","l":"Replace()","u":"%3Cinit%3E()"}];updateSearchResults();
