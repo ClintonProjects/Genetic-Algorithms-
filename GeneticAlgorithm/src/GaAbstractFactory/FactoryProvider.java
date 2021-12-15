@@ -1,5 +1,7 @@
 package GaAbstractFactory;
 
+import GeneticAlgorithm.Mode;
+
 //Class Name: Couple
 //Description:
 //This is for the abstract factory.
@@ -13,11 +15,11 @@ public class FactoryProvider {
 	* @return String choice
 	* @see   
 	*/	
-	public static AbstractFactory getFactory(FactoryControllor choice) {
+	public static AbstractFactory getFactory(Mode choice) {
 
-		if (choice == FactoryControllor.TwoPoint) {
+		if (choice == Mode.TwoPoint) {
 			return new GeneticAlgorithmFactoryTwoPoint();
-		} else if (choice == FactoryControllor.OnePoint) {
+		} else if (choice == Mode.OnePoint) {
 			return new GeneticAlgorithmFactoryOnePoint();
 		}
 		return null;

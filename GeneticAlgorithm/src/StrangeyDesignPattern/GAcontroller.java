@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.ListIterator;
 
 import GaAbstractFactory.AbstractFactory;
-import GaAbstractFactory.FactoryControllor;
 import GaAbstractFactory.FactoryProvider;
-import GaAbstractFactory.Mode;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.FitnessEvaluator;
 import GeneticAlgorithm.Individual;
+import GeneticAlgorithm.Mode;
 import GeneticAlgorithm.Population;
 import GeneticAlgorithm.Replace;
 import Singleton.ConfigurationFile;
@@ -34,7 +33,7 @@ public class GAcontroller {
 
 	public GAcontroller(String mode) {
 		this.mode = mode;
-		FactoryControllor s = mode.equalsIgnoreCase("One Point") ? FactoryControllor.OnePoint : FactoryControllor.TwoPoint;
+		Mode s = mode.equalsIgnoreCase("One Point") ? Mode.OnePoint : Mode.TwoPoint;
 		OpratorFactory = FactoryProvider.getFactory(s);
 		crossover = OpratorFactory.getCrossover();
 		mutator = OpratorFactory.getMutation();
@@ -44,7 +43,7 @@ public class GAcontroller {
 
 	public GAcontroller() {
 
-		OpratorFactory = FactoryProvider.getFactory(FactoryControllor.OnePoint);
+		OpratorFactory = FactoryProvider.getFactory(Mode.OnePoint);
 		crossover = OpratorFactory.getCrossover();
 		mutator = OpratorFactory.getMutation();
 		selector = OpratorFactory.getSelection();
@@ -93,13 +92,13 @@ public class GAcontroller {
 	}
 
 	public void setMutation(String mode) {
-		FactoryControllor s = mode.equalsIgnoreCase("One Point") ? FactoryControllor.OnePoint : FactoryControllor.TwoPoint;
+		Mode s = mode.equalsIgnoreCase("One Point") ? Mode.OnePoint : Mode.TwoPoint;
 
-		if (s == FactoryControllor.TwoPoint) {
-			OpratorFactory = FactoryProvider.getFactory(FactoryControllor.TwoPoint);
+		if (s == Mode.TwoPoint) {
+			OpratorFactory = FactoryProvider.getFactory(Mode.TwoPoint);
 			mutator = OpratorFactory.getMutation();
-		} else if (s == FactoryControllor.OnePoint) {
-			OpratorFactory = FactoryProvider.getFactory(FactoryControllor.OnePoint);
+		} else if (s == Mode.OnePoint) {
+			OpratorFactory = FactoryProvider.getFactory(Mode.OnePoint);
 			mutator = OpratorFactory.getMutation();
 		}
 
@@ -107,12 +106,12 @@ public class GAcontroller {
 	}
 
 	public void setCrossover(String mode) {
-		FactoryControllor s = mode.equalsIgnoreCase("One Point") ? FactoryControllor.OnePoint : FactoryControllor.TwoPoint;
-		if (s == FactoryControllor.TwoPoint) {
-			OpratorFactory = FactoryProvider.getFactory(FactoryControllor.TwoPoint);
+		Mode s = mode.equalsIgnoreCase("One Point") ? Mode.OnePoint : Mode.TwoPoint;
+		if (s == Mode.TwoPoint) {
+			OpratorFactory = FactoryProvider.getFactory(Mode.TwoPoint);
 			crossover = OpratorFactory.getCrossover();
-		} else if (s == FactoryControllor.OnePoint) {
-			OpratorFactory = FactoryProvider.getFactory(FactoryControllor.OnePoint);
+		} else if (s == Mode.OnePoint) {
+			OpratorFactory = FactoryProvider.getFactory(Mode.OnePoint);
 			crossover = OpratorFactory.getCrossover();
 			;
 		}
@@ -123,10 +122,10 @@ public class GAcontroller {
 	public void setSelection(String mode) {
 		Mode s = mode.equalsIgnoreCase("Tournament") ? Mode.Tourment : Mode.Roulette;
 		if ( s == Mode.Tourment) {
-			OpratorFactory = FactoryProvider.getFactory(FactoryControllor.TwoPoint);
+			OpratorFactory = FactoryProvider.getFactory(Mode.TwoPoint);
 			selector = OpratorFactory.getSelection();
 		} else if (s == Mode.Roulette) {
-			OpratorFactory = FactoryProvider.getFactory(FactoryControllor.OnePoint);
+			OpratorFactory = FactoryProvider.getFactory(Mode.OnePoint);
 			selector = OpratorFactory.getSelection();
 		}
 
