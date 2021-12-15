@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+//Class Name: Couple
+//Description:
+//This is for the abstract factory.
+//Authors(s): Clinton, Wang
+
 import Singleton.ConfigurationFile;
 
 public class Individual  implements Serializable{

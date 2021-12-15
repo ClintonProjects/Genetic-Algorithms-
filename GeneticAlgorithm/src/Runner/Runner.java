@@ -4,6 +4,12 @@ import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 import StrangeyDesignPattern.GAcontroller;
 
+//Class Name: Couple
+//Description:
+//This is for the abstract factory.
+//Authors(s): Clinton, Wang
+
+
 public class Runner {
 
 	public static void main(String... args) {

@@ -1,6 +1,10 @@
 package GeneticAlgorithm;
 
-
+//Class Name: Couple
+//Description:
+//This class is for the creation of couples, 
+//this is essentially 2 individuals which are combined into a single class.
+//Authors(s): Clinton, Wang
 
 public class Couple {
 
@@ -27,8 +31,10 @@ public class Couple {
 
 	public void setIndividual2(Individual individual2) {
 		Individual2 = individual2;
+
 	}
 	
+	//This allows for to return a new couple that's not the same object as the original.
 	public Couple deepCopy(){                    
 		Couple dest = new Couple();      
         dest.Individual1=this.Individual1.deepCopy();

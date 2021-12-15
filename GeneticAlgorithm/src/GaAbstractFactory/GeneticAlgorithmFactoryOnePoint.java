@@ -7,11 +7,14 @@ import StrangeyDesignPattern.OnePointMutation;
 import StrangeyDesignPattern.RouletteWheelSelection;
 import StrangeyDesignPattern.Selection;
 
+//Class Name: Couple
+//Description:
+//This is for the abstract factory.
+//Authors(s): Clinton, Wang
+
+
 public class GeneticAlgorithmFactoryOnePoint implements AbstractFactory {
 
-	
-	// 
-	
 	@Override
 	public Crossover getCrossover() {
 		// TODO Auto-generated method stub

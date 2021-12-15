@@ -3,6 +3,12 @@ package GeneticAlgorithm;
 import java.util.ArrayList;
 import java.util.Random;
 
+//Class Name: GenesB
+//Description:
+//This is the Genes for an String. This is implementing a generic class.
+//We do this by filling the genes with variables that are randomly generated.
+//Authors(s): Clinton, Wang
+
 import Singleton.ConfigurationFile;
 
 public class GenesB implements GenesCreation<String> {

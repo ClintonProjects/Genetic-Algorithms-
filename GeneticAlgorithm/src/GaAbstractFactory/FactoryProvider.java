@@ -1,10 +1,13 @@
 package GaAbstractFactory;
 
+//Class Name: Couple
+//Description:
+//This is for the abstract factory.
+//Authors(s): Clinton, Wang
 
 public class FactoryProvider {
  
 	//Factory provider for the abstract factory method.
-	
 	public static AbstractFactory getFactory(String choice) {
 
 		if (choice.equalsIgnoreCase("Two Point")) {

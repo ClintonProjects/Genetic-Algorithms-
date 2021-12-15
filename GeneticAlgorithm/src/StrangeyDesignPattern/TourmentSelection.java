@@ -7,14 +7,13 @@ import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 
+//Class Name: Couple
+//Description:
+//This is for the abstract factory.
+//Authors(s): Clinton, Wang
+
 public class TourmentSelection implements Selection {
 
-	/*
-	 * WOW
-	 * 
-	 * 
-	 * 
-	 */
 	Population population;
 
 	public TourmentSelection() {

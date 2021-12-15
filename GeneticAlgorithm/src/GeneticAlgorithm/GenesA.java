@@ -1,5 +1,12 @@
 package GeneticAlgorithm;
 
+//Class Name: GenesB
+//Description:
+//This is the Genes for an Integer. This is implementing a generic class.
+//We do this by filling the genes with variables that are randomly generated.
+//Authors(s): Clinton, Wang
+
+
 import java.util.ArrayList;
 import java.util.Random;
 

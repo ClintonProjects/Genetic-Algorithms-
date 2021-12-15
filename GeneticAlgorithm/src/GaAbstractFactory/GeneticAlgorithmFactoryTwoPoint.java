@@ -11,6 +11,12 @@ import StrangeyDesignPattern.TourmentSelection;
 import StrangeyDesignPattern.TwoPointCrossover;
 import StrangeyDesignPattern.TwoPointMutation;
 
+//Class Name: Couple
+//Description:
+//This is for the abstract factory.
+//Authors(s): Clinton, Wang
+
+
 public class GeneticAlgorithmFactoryTwoPoint implements AbstractFactory {
 
 	@Override
@@ -26,7 +32,6 @@ public class GeneticAlgorithmFactoryTwoPoint implements AbstractFactory {
 	}
 
 	@Override
-
 	public Selection getSelection() {
 		// TODO Auto-generated method stub
 		return new TourmentSelection();

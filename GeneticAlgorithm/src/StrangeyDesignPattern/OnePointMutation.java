@@ -6,6 +6,11 @@ import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.Individual;
 import Singleton.ConfigurationFile;
 
+//Class Name: Couple
+//Description:
+//This is for the abstract factory.
+//Authors(s): Clinton, Wang
+
 public class OnePointMutation implements Mutation {
 
 	
