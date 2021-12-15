@@ -4,13 +4,24 @@ import java.util.ListIterator;
 
 import Singleton.ConfigurationFile;
 
+/*Class Name: FitnessEvaluator
+*Description:
+*This is FitnessEvaluator, which have methods to update the fitness of individual,couple,and population based on polymorphism
+*Besides, it also provides the methods of get individual which has a longest or shortest distance ie.fitness from a population 
+*Authors(s): Clinton, Wang
+*/
+
+
+
 public class FitnessEvaluator {
 
 	
 	public FitnessEvaluator() {
 		
 	}
-	
+	/*Update the fitness of an Individual 
+	 *it will add a distance between two cities to get a sum, the sum will be the fitness 
+	 */
 	public void updateFitness(Individual individual) {
 		float totalDis = 0.0f;
 		for (int i = 0; i < ConfigurationFile.getInstance().CITY_NUM; i++) {
@@ -22,12 +33,12 @@ public class FitnessEvaluator {
 		individual.setFitness(totalDis);
 	}
 	
-	
+	//Update the fitness for a Couple 
 	public void updateFitness(Couple couple) {
 		updateFitness(couple.Individual1);
 		updateFitness(couple.Individual2);
 	}
-	
+	//Update the fitness for a Population
 	public void updateFitness(Population population) {
 		ListIterator<Individual> P_iterator =population.getPopulation().listIterator();
 		while(P_iterator.hasNext()) {
@@ -37,7 +48,7 @@ public class FitnessEvaluator {
 	}
 	
 	
-	
+	// get individual which has biggest fitness from a population
 	public Individual getWeakest(Population p)
 	  {
 		float distance=0;
@@ -58,7 +69,7 @@ public class FitnessEvaluator {
 		//PrintFitness(p);
 		return bestSpecies;
 	  }
-	
+	// get individual which has shortest fitness from a population
 	public Individual getBest(Population p)
 	  {
 		float distance=Float.MAX_VALUE;
