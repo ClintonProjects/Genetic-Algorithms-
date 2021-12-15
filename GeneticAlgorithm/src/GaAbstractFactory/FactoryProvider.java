@@ -13,11 +13,11 @@ public class FactoryProvider {
 	* @return String choice
 	* @see   
 	*/	
-	public static AbstractFactory getFactory(String choice) {
+	public static AbstractFactory getFactory(FactoryControllor choice) {
 
-		if (choice.equalsIgnoreCase("Two Point")) {
+		if (choice == FactoryControllor.TwoPoint) {
 			return new GeneticAlgorithmFactoryTwoPoint();
-		} else if (choice.equalsIgnoreCase("One Point")) {
+		} else if (choice == FactoryControllor.OnePoint) {
 			return new GeneticAlgorithmFactoryOnePoint();
 		}
 		return null;

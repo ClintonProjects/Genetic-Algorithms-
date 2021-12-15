@@ -11,6 +11,9 @@ import StrangeyDesignPattern.Selection;
 * @see   
 */	
 public interface AbstractFactory  {
+	
+	
+	
 	//abstract factory provider for the abstract factory method.
 	public Crossover getCrossover();
 	public Mutation getMutation();
