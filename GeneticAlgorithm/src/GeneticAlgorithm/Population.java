@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import GeneticAlgorithm.Individual;
 import Singleton.ConfigurationFile;
 
-//Class Name: Couple
-//Description:
+//Class Name: Population
+//Description: 
 //
 //Authors(s): Clinton, Wang
 

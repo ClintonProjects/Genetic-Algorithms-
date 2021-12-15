@@ -13,9 +13,8 @@ import GeneticAlgorithm.Population;
 import GeneticAlgorithm.Replace;
 import Singleton.ConfigurationFile;
 
-//Class Name: Couple
-//Description:
-//
+//Class Name: GAcontroller
+//Description: The controller of the GA
 //Authors(s): Clinton, Wang
 
 public class GAcontroller {
@@ -30,7 +29,7 @@ public class GAcontroller {
 	Individual bestIndividualOfAll = new Individual();
 
 	public ArrayList<Float> generationBestFitness = new ArrayList<Float>();
-
+    
 	public GAcontroller(Mode mode) {
 		this.mode = mode;
 		//Mode s = mode.equalsIgnoreCase("One Point") ? Mode.OnePoint : Mode.TwoPoint;
