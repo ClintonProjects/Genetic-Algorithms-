@@ -2,19 +2,17 @@ package StrangeyDesignPattern;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
-import AbstractFactory.AbstractFactory;
-import AbstractFactory.FactoryProvider;
+import GaAbstractFactory.AbstractFactory;
+import GaAbstractFactory.FactoryProvider;
 import GeneticAlgorithm.Couple;
 import GeneticAlgorithm.FitnessEvaluator;
 import GeneticAlgorithm.Individual;
 import GeneticAlgorithm.Population;
 import GeneticAlgorithm.Replace;
-import Inheritance.*;
 import Singleton.ConfigurationFile;
-import Singleton.ConfigurationFileSingleton;
 
 
-public class GAcontroller {
+public class GAcontroller  {
 	
 	String[] mode;
 	AbstractFactory OpratorFactory;
@@ -24,7 +22,7 @@ public class GAcontroller {
     Selection selector;
     Replacer  Replacer;
     Individual bestIndividualOfAll=new Individual() ;
-	ConfigurationFile ConfigurationFile_ins = ConfigurationFileSingleton.getInstance();
+
 	
 	public ArrayList<Float> generationBestFitness = new ArrayList<Float>();
 	
@@ -48,7 +46,7 @@ public class GAcontroller {
 	}
 	public Individual run(Population population)
 	{
-		int DEVELOP_NUM=ConfigurationFile_ins.DEVELOP_NUM;
+		int DEVELOP_NUM=ConfigurationFile.getInstance().DEVELOP_NUM;
 		
 		while( DEVELOP_NUM > 0){
 			elistic(population);

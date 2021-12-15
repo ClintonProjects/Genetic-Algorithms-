@@ -1,7 +1,7 @@
 package GeneticAlgorithm;
 import java.util.ListIterator;
 
-import Inheritance.*;
+import StrangeyDesignPattern.Replacer;
 
 
 public class Replace implements Replacer{

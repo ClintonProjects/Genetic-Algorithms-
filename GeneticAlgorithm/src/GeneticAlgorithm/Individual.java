@@ -10,14 +10,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-import Genes.GenesB;
-import Genes.GenesCreation;
 import Singleton.ConfigurationFile;
-import Singleton.ConfigurationFileSingleton;
 
 public class Individual  implements Serializable{
 	// ConfigurationFile;
-	ConfigurationFile ConfigurationFile_ins = ConfigurationFileSingleton.getInstance();
+
 	public ArrayList<String> genes = new ArrayList<String>();
 
 	private float fitness;
@@ -33,11 +30,11 @@ public class Individual  implements Serializable{
 
 	float updateFitness() {
 		float totalDis = 0.0f;
-		for (int i = 0; i < ConfigurationFile_ins.CITY_NUM; i++) {
+		for (int i = 0; i < ConfigurationFile.getInstance().CITY_NUM; i++) {
 			int curCity = Integer.parseInt(this.genes.get(i));// the maptable of mind from 1, but in reality from 0
-			int nextCity = Integer.parseInt(this.genes.get((i + 1) % ConfigurationFile_ins.CITY_NUM));
+			int nextCity = Integer.parseInt(this.genes.get((i + 1) % ConfigurationFile.getInstance().CITY_NUM));
 			// use i+1 %max ==0 to go back to initial
-			totalDis += ConfigurationFile_ins.disMap[curCity][nextCity];
+			totalDis += ConfigurationFile.getInstance().disMap[curCity][nextCity];
 		}
 		this.fitness = totalDis;
 		return this.fitness;
