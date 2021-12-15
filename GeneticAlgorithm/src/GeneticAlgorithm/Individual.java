@@ -12,7 +12,7 @@ import java.util.Random;
 
 //Class Name: Couple
 //Description:
-//This is for the abstract factory.
+//This is single item in are population, as in a specific city
 //Authors(s): Clinton, Wang
 
 import Singleton.ConfigurationFile;
